@@ -531,6 +531,7 @@ public class SMain extends JavaPlugin{
 				System.out.println("[SideKick] " + playername + " used SideKick Page Five");
 				return true;  
 			}
+			//Menu 6
 			else if (cmdLabel.equalsIgnoreCase("sidekick6")){
 				sender.sendMessage(R + "------SideKick Page 6 Commands-----");
 				sender.sendMessage(B + "/// - Shuts down the server");
@@ -548,6 +549,7 @@ public class SMain extends JavaPlugin{
 				System.out.println("[SideKick] " + playername + " used SideKick Page Six");
 				return true;
 			}
+			//Menu 7
 			else if (cmdLabel.equalsIgnoreCase("sidekick7")){
 				sender.sendMessage(R + "------SideKick Page 7 Commands-----");
 				sender.sendMessage(B + "/InvClear <Username> - Clears that Players Inv");
@@ -567,6 +569,7 @@ public class SMain extends JavaPlugin{
 				System.out.println("[SideKick] " + playername + " used SideKick Page Seven");
 				return true;
 			}
+			//Menu 8
 			else if (cmdLabel.equalsIgnoreCase("sidekick8")){
 				sender.sendMessage(R + "------SideKick Page 8 Commands-----");
 				sender.sendMessage(B + "/PotionEffect ? - PotionEffect Help Menu");
