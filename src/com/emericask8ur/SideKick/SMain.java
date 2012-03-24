@@ -441,7 +441,7 @@ public class SMain extends JavaPlugin{
 				sender.sendMessage(B + "/i <ItemName>");
 				sender.sendMessage(qq + "/Edit <Block> - Edits a block to any type, Type /edit? for info");
 				sender.sendMessage(B + "/Weather <Sun/Storm>");
-				sender.sendMessage(B + "/Time <Day/Night");
+				sender.sendMessage(B + "/Time <Day/Night>");
 				sender.sendMessage(B + "/ClearInv - Clears out your inv");
 				sender.sendMessage(B + "/Teleport <Username> or /Tp <Username> - You to someone");
 				sender.sendMessage(B + "/ToMe <Username> - Teleports the player to you!");
