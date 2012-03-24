@@ -1,0 +1,6 @@
+Devs who want to be apart of SideKick, Pull Request and follow these guidelines:
+
+- No Trailing Whitespaces
+- Add //Notes above new Command/Feature with the Name of command and small Description
+- Do not change Config Code
+- Where it States /* ----- Do not add Below here ----- */ DO NOT ADD!
