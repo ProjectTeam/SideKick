@@ -1939,8 +1939,13 @@ public class SMain extends JavaPlugin{
 		//Fly
 		else if (cmdLabel.equalsIgnoreCase("fly") && has(p, "fly")  ){
 			if(args.length==0){
+				if(!p.isFlying()){
 				p.setFlying(true);
 				sender.sendMessage(G + "You are now flying!");
+				} else {
+					p.setFlying(false);
+					sender.sendMessage(G + "You are no longer flying!");
+				}
 			} else {
 				sender.sendMessage(R + "Did you mean /Fly");
 			}
