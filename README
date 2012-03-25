@@ -1,6 +1,11 @@
 Devs who want to be apart of SideKick, Pull Request and follow these guidelines:
 
-- No Trailing Whitespaces
-- Add //Notes above new Command/Feature with the Name of command and small Description
-- Do not change Config Code
-- Where it States /* ----- Do not add Below here ----- */ DO NOT ADD!
+•Generally follow the Oracle coding standards.
+•Use tabs, no spaces.
+•No trailing whitespaces.
+•No 80 column limit or midstatement newlines.
+•Pull requests must compile and work.
+•Pull requests must be formatted properly.
+•No merges should be included in pull requests unless the pull request's purpose is a merge.
+•Number of commits in a pull request should be kept to one commit and all additional commits must be squashed and signed off.
+•For clarification, see the full pull request guidelines here 
