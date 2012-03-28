@@ -1605,13 +1605,20 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//heal command
-		else if (cmdLabel.equalsIgnoreCase("heal") && args.length==1 && has(p, "heal")  ){
+		else if (cmdLabel.equalsIgnoreCase("heal") && has(p, "heal")  ){
+			if(args.length==0){
+				p.setHealth(20);
+			}
+			else if (args.length==1){
 			Player heal = server.getPlayer(args[0]);
 			if(heal !=null){
 				server.getPlayer(args[0]).setHealth(20);
 				sender.sendMessage(B + "You have Healed " + args[0] + " !");
 			} else {
 				sender.sendMessage(R + "Player not found!");
+				}
+			} else {
+				sender.sendMessage(R + "Too many arguments! /Heal [User]");
 			}
 			return true;
 		}
