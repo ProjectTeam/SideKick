@@ -1938,18 +1938,13 @@ public class SMain extends JavaPlugin{
 		}
 		//Fly
 		else if (cmdLabel.equalsIgnoreCase("fly") && has(p, "fly")  ){
-			if(args.length==0){
-				if(!p.isFlying()){
-				p.setFlying(true);
-				sender.sendMessage(G + "You are now flying!");
-				} else {
-					p.setFlying(false);
-					sender.sendMessage(G + "You are no longer flying!");
-				}
+			PL.fly = !PL.fly;
+			if(PL.fly){
+				sender.sendMessage("Click with Sign in Hand!");
 			} else {
-				sender.sendMessage(R + "Did you mean /Fly");
+				sender.sendMessage(R + "Fly Disabled");
 			}
-			return true;			  
+			return true;
 		} 
 		/* ----- Do not add Below here ----- */
 		else if (cmdLabel.equalsIgnoreCase("sk")  ) {

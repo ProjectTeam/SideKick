@@ -13,7 +13,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.inventory.ItemStack;
-//import org.bukkit.util.Vector;
+import org.bukkit.util.Vector;
 public class PL implements Listener{
 	public static boolean Tools = false;
     public static boolean game = false;
@@ -21,7 +21,7 @@ public class PL implements Listener{
     public static boolean Join = false;
     public static boolean TheKit = false;
     public static boolean Sneak = false;
-//    public static boolean fly = false;
+    public static boolean fly = false;
 	@EventHandler(priority = EventPriority.NORMAL)
 	public void onPlayerInteract(PlayerInteractEvent event){
 		Player p = event.getPlayer(); 
@@ -106,15 +106,15 @@ public class PL implements Listener{
         	if (item.getType() == Material.WOOD_SWORD);
         	p.getItemInHand().setDurability((short) 15);
         }
-//        if(fly){
-//        	if(p.getItemInHand().getType()==Material.SIGN && p.hasPermission("Sidekick.fly")){
-//    	    Player player = event.getPlayer();
-//    	 Vector dir = player.getLocation().getDirection();
-//          Vector vec = new Vector(dir.getX() * 0.8D, 0.8D, dir.getZ() * 0.8D);
-//          player.setVelocity(vec);
-//          player.setFallDistance(-100.0F);
-//        }
-//        }
+        if(fly){
+        	if(p.getItemInHand().getType()==Material.SIGN && p.hasPermission("Sidekick.fly")){
+    	    Player player = event.getPlayer();
+    	 Vector dir = player.getLocation().getDirection();
+          Vector vec = new Vector(dir.getX() * 0.8D, 0.8D, dir.getZ() * 0.8D);
+          player.setVelocity(vec);
+          player.setFallDistance(-100.0F);
+        }
+        }
 	}
 	@EventHandler(priority = EventPriority.NORMAL)
 	public void onPlayerQuit(PlayerQuitEvent event){
