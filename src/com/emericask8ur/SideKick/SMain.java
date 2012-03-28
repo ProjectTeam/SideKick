@@ -1758,6 +1758,9 @@ public class SMain extends JavaPlugin{
 		}
 		//WorldGen type name
 		else if (cmdLabel.equalsIgnoreCase("worldgen") && args.length==2 && has(p, "worldgen")  ){
+			if(!(args.length==2)){
+				sender.sendMessage(R + "Did you mean /Worldgen <Nether/Normal/End> <worldname> ");
+			}
 			if(args[0].equalsIgnoreCase("normal")){
 				WorldCreator c = new WorldCreator(args[1]);
 				c.environment(Environment.NORMAL);
