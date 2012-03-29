@@ -4,4 +4,4 @@ Updated Mobs
 Implemented all new code with 1.2.3
 Updated Items
 Fixed Arrow shooting, Occurred on builds for R7 and above.
-Updated to new flying system, no longer need a sign. Creative Flying
+Added ability to use more arguments on SideKick Menu; /SideKick [Page]
