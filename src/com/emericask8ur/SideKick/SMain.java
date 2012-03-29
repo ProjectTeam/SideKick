@@ -471,7 +471,7 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(Y + "/Info- Shows version and Info about it");
 						sender.sendMessage(B + "/Add Under <Block> <X> <Y> <Z> -Replaces Block Within Radius");
 						sender.sendMessage(R + "Type /Sidekick2 To turn to page 2");
-						System.out.println("[SideKick] " + playername + " used SideKick Page One");
+						System.out.println("[SideKick] " + playername + " used SideKick Page One or /SideKick [Page]");
 						break;
 					case 2:
 						sender.sendMessage(R + "-------SideKick Page 2 Commands------");
@@ -935,7 +935,8 @@ public class SMain extends JavaPlugin{
 			return true;
 
 		}
-		else if (cmdLabel.equalsIgnoreCase("addunder") && args.length==1 && has(p, "edit")  ){
+		else if (cmdLabel.equalsIgnoreCase("addunder") && has(p, "edit")  ){
+			if(!(args.length==1)){sender.sendMessage(R + "Check your arguments!");}
 			Material mat = HashMapz.getMaterial(args[0]);
 			if(mat !=null){
 				Location l = p.getLocation();
@@ -948,7 +949,8 @@ public class SMain extends JavaPlugin{
 			}
 		}
 		//List Worlds
-		else if (cmdLabel.equalsIgnoreCase("list") && args.length==1 && has(p, "listworlds")  ){
+		else if (cmdLabel.equalsIgnoreCase("list") && has(p, "listworlds")  ){
+			if(!(args.length==1)){sender.sendMessage(R + "Did you mean /List Worlds");}
 			List<World> list = server.getWorlds();
 			String i = list.toString();
 			String ii = i.replace("{", "");
@@ -965,7 +967,8 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//Mode Changer
-		else if (cmdLabel.equalsIgnoreCase("mode") && args.length==3 && has(p, "mode")  ){
+		else if (cmdLabel.equalsIgnoreCase("mode") && has(p, "mode")  ){
+			if(!(args.length==3)){sender.sendMessage(R + "Check your arguments!");}
 			if(args[0].equalsIgnoreCase("change")){
 				Player play = server.getPlayer(args[1]);
 				if(play !=null){
@@ -987,7 +990,8 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//invClear
-		else if (cmdLabel.equalsIgnoreCase("invclear") && args.length==1 && (has(p, "clearinventory")  )){
+		else if (cmdLabel.equalsIgnoreCase("invclear")  && (has(p, "clearinventory")  )){
+			if(!(args.length==1)){sender.sendMessage(R + "Did you mean /InvClear <Player>");}
 			Player play = server.getPlayer(args[0]);
 			if(play !=null){
 				play.getInventory().clear();
@@ -1012,16 +1016,6 @@ public class SMain extends JavaPlugin{
 			}
 			return true;
 		}
-		else if (cmdLabel.equalsIgnoreCase("ban") && args.length==1 && has(p , "ban")  ){
-			Player pl = server.getPlayer(args[0]);
-			if(pl!=null){
-				pl.setBanned(true);
-				sender.sendMessage(args[0] + " Has been banned!");
-			} else {
-				sender.sendMessage(R + "Player not found!");
-			}
-			return true;
-		}
 		//Log
 		else if (cmdLabel.equalsIgnoreCase("log") && args.length==1 && has(p, "log")  ){
 			if(args[0].equalsIgnoreCase("breaks")){
@@ -1035,7 +1029,7 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//Warn <Playername>
-		else if (cmdLabel.equalsIgnoreCase("warn")&& has(p, "warn")  ){
+		else if (cmdLabel.equalsIgnoreCase("warn") && has(p, "warn")  ){
 			Player found = server.getPlayer(args[0]);
 			if (found != null) {
 				String message = "";
