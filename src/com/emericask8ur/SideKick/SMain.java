@@ -1685,7 +1685,7 @@ public class SMain extends JavaPlugin{
 		}
 		//Shows version Info -------------------------------- Update
 		else if (cmdLabel.equalsIgnoreCase("info") && has(p, "info")  ){
-			sender.sendMessage(G + "Version 5.5 - Created by emericask8ur. Follow him on twitter: @emericask8ur");
+			sender.sendMessage(G + "Version 6.0 - Created by emericask8ur. Follow him on twitter: @emericask8ur");
 			return true;
 		}
 		//TimeDay
