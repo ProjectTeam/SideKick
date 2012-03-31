@@ -1615,8 +1615,10 @@ public class SMain extends JavaPlugin{
 				sender.sendMessage(R + "Weather set to Sun, Type /Weather Storm to make it Storm");
 				server.broadcastMessage(ChatColor.AQUA + playername + " has set Weather to Sun!");
 				return true;
+			} else {
+				sender.sendMessage(R + "Did you mean /Weather <Sun/Storm>");
 			}
-
+			return true;
 		}
 		//PVP true
 		else if (cmdLabel.equalsIgnoreCase("pvp") && args.length > 0 && has(p, "pvp")  ){
