@@ -541,7 +541,6 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(B + "/Eat - Fills your Food Bar Up");
 						sender.sendMessage(B + "/Weapon <1/2> - Pick a Weapon Kit");
 						sender.sendMessage(B + "/Restart - Restarts server");
-						sender.sendMessage(B + "/Shotgun <amount> - 1-4 Shoots Arrows In your sign");
 						sender.sendMessage(B + "/Effect <1/2/3>");
 						sender.sendMessage(R + "/Sidekick6 To View the 6th Page");
 						System.out.println("[SideKick] " + playername + " used SideKick Page Five");
@@ -1157,35 +1156,6 @@ public class SMain extends JavaPlugin{
 			p.setExhaustion(0);
 			sender.sendMessage(G + "Exhaustion decreased");
 			return true;
-		}
-		//SGun
-		else if (cmdLabel.equalsIgnoreCase("shotgun") && args.length==1 && has(p, "shotgun")  ){
-			if(args[0].equalsIgnoreCase("1")){
-				p.getWorld().spawnCreature(p.getLocation(), EntityType.ARROW);
-				w.playEffect(loc, Effect.BOW_FIRE,1);
-				return true;
-			}
-			else if (args[0].equalsIgnoreCase("2")){
-				p.getWorld().spawnCreature(p.getLocation(), EntityType.ARROW);
-				p.getWorld().spawnCreature(p.getLocation(), EntityType.ARROW);
-				w.playEffect(loc, Effect.BOW_FIRE, 2);
-				return true;
-			}
-			else if (args[0].equalsIgnoreCase("3")){
-				p.getWorld().spawnCreature(p.getLocation(), EntityType.ARROW);
-							p.getWorld().spawnCreature(p.getLocation(), EntityType.ARROW);
-							p.getWorld().spawnCreature(p.getLocation(), EntityType.ARROW);
-				w.playEffect(loc, Effect.BOW_FIRE, 3);
-				return true;
-			}
-			else if (args[0].equalsIgnoreCase("4")){
-				p.getWorld().spawnCreature(p.getLocation(), EntityType.ARROW);
-				p.getWorld().spawnCreature(p.getLocation(), EntityType.ARROW);
-				p.getWorld().spawnCreature(p.getLocation(), EntityType.ARROW);
-				p.getWorld().spawnCreature(p.getLocation(), EntityType.ARROW);
-				w.playEffect(loc, Effect.BOW_FIRE, 4);
-				return true;
-			}
 		}
 		//Edit
 		else if (cmdLabel.equalsIgnoreCase("edit") && args.length==1 && has(p, "edit")  ){

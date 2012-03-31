@@ -203,9 +203,6 @@ commands:
   Dehydrator:
    description: Drink
    usage: /Dehydrator
-  Shotgun:
-   description: Eat
-   usage: /Shotgun
   Edit:
    description: Change blocks
    usage: /Eat
@@ -484,9 +481,6 @@ permissions:
    description: Uses this plugin
    default: op
   Sidekick.water:
-   description: Uses this plugin
-   default: op
-  Sidekick.shotgun:
    description: Uses this plugin
    default: op
   Sidekick.edit:
