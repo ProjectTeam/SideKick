@@ -5,3 +5,4 @@ Implemented all new code with 1.2.3
 Updated Items
 Fixed Arrow shooting, Occurred on builds for R7 and above.
 Added ability to use more arguments on SideKick Menu; /SideKick [Page]
+Fixed /Ban <User>
