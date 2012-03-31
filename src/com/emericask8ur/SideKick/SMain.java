@@ -1624,12 +1624,12 @@ public class SMain extends JavaPlugin{
 				if(args[0].equalsIgnoreCase("on")){
 					w.setPVP(true);
 					sender.sendMessage(R + "You set PVP On!");
-					server.broadcastMessage(ChatColor.AQUA + playername + " has set PVP On!");
+					server.broadcastMessage(ChatColor.AQUA + "PvP Status: " + ChatColor.GREEN + "On");
 				}
 				else if (args[0].equalsIgnoreCase("off")){
 					w.setPVP(false);
 					sender.sendMessage(R + " You set PVP Off!");
-					server.broadcastMessage(ChatColor.AQUA + playername + " has set PVP Off!");
+					server.broadcastMessage(ChatColor.AQUA + "PvP Status: " + ChatColor.RED + "Off");
 					return true;
 				}
 			}
