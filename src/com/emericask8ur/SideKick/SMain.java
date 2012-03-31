@@ -455,6 +455,7 @@ public class SMain extends JavaPlugin{
 				}
 				else if (args.length==1){
 					int page = Integer.parseInt(args[0]);
+					try{
 					switch(page){
 					case 1:
 						sender.sendMessage(R + "-------SideKick Commands-------");
@@ -587,6 +588,9 @@ public class SMain extends JavaPlugin{
 						System.out.println("[SideKick] " + playername + " used SideKick Page Eight");
 						break;
 						}
+					}catch (Exception i){
+						sender.sendMessage(R + "Please enter a valid page number!");
+					}
 				}
 				return true;
 			}
@@ -1453,7 +1457,8 @@ public class SMain extends JavaPlugin{
 			}
 		}
 		//G Command
-		else if (cmdLabel.equalsIgnoreCase("g") && args.length==2 && has(p, "g")  ){
+		else if (cmdLabel.equalsIgnoreCase("g") && has(p, "g")  ){
+			if(!(args.length==2)){sender.sendMessage(R + "Did you mean /G <Player> <Item:ID>");}
 			Player rec = server.getPlayer(args[0]);
 			int data = -1;
 		    int index = args[0].lastIndexOf(':');
@@ -1468,7 +1473,7 @@ public class SMain extends JavaPlugin{
 				ItemStack item = new ItemStack(type, type.getMaxStackSize());
 				if (data != -1) item.setDurability((short) data);
 				rec.getInventory().addItem(item);
-				sender.sendMessage(G + "You have gave " + args[0] + "" + args[1]);
+				sender.sendMessage(G + "You have gave " + args[0] + " " + args[1]);
 				rec.sendMessage(G + "[SideKick] You have received " + args[1]);
 				return true;
 			} else {
