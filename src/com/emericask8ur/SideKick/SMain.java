@@ -453,11 +453,9 @@ public class SMain extends JavaPlugin{
 				System.out.println("[SideKick] " + playername + " used SideKick Page One");
 				return true;
 				}
+				//Numbers
 				else if (args.length==1){
-					int page = Integer.parseInt(args[0]);
-					try{
-					switch(page){
-					case 1:
+					if(args[0].equalsIgnoreCase("1")){
 						sender.sendMessage(R + "-------SideKick Commands-------");
 						sender.sendMessage(Purp + "Welcome " + R + p.getName());
 						sender.sendMessage(B + "/ChangeName <Username>");
@@ -472,9 +470,10 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(Y + "/Info- Shows version and Info about it");
 						sender.sendMessage(B + "/Add Under <Block> <X> <Y> <Z> -Replaces Block Within Radius");
 						sender.sendMessage(R + "Type /Sidekick2 To turn to page 2");
-						System.out.println("[SideKick] " + playername + " used SideKick Page One or /SideKick [Page]");
-						break;
-					case 2:
+						System.out.println("[SideKick] " + playername + " used SideKick Page One");
+						return true;
+					}
+					else if (args[0].equalsIgnoreCase("2")){
 						sender.sendMessage(R + "-------SideKick Page 2 Commands------");
 						sender.sendMessage(B + "/PVP <On/Off>");
 						sender.sendMessage(B + "/PVP <WorldName> <On/Off>");
@@ -491,8 +490,9 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(B + "/RealMode - Makes your Server Realistic, Type /RealMode? for info");
 						sender.sendMessage(R + "Type /SideKick3 To View the 3rd Page");
 						System.out.println("[SideKick] " + playername + " used SideKick Page Two");
-						break;
-					case 3:
+						return true;
+					}
+					else if (args[0].equalsIgnoreCase("3")){
 						sender.sendMessage(R + "-----SideKick Page 3 Commands------");
 						sender.sendMessage(B + "/Super - Super Jump Command");
 						sender.sendMessage(B + "/Loction - Shows your location");
@@ -512,8 +512,9 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(B + "/Spawner <Mob/Animal>");
 						sender.sendMessage(R + "Type /sidekick4 To View the 4rd Page");
 						System.out.println("[SideKick] " + playername + " used SideKick Page Three");
-						break;
-					case 4:
+						return true;
+					}
+					else if (args[0].equalsIgnoreCase("4")){
 						sender.sendMessage(R + "------SideKick Page 4 Commands-----");
 						sender.sendMessage(B + "/Mysterybox- Break IronBlock and receive Mystery!");
 						sender.sendMessage(B + "/NoMobs - Kills all Mobs");
@@ -527,8 +528,9 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(Y + "/Rules - Shows the Rules");
 						sender.sendMessage(R + "Type /sidekick5 To View the 5th Page");
 						System.out.println("[SideKick] " + playername + " used SideKick Page Four");
-						break;
-					case 5:
+						return true;
+					}
+					else if (args[0].equalsIgnoreCase("5")){
 						sender.sendMessage(R + "------SideKick Page 5 Commands------");
 						sender.sendMessage(Y + "----" + ChatColor.DARK_PURPLE + "Money Commands" + Y + "----");
 						sender.sendMessage(G + "/sk money - Shows your $");
@@ -541,11 +543,13 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(B + "/Eat - Fills your Food Bar Up");
 						sender.sendMessage(B + "/Weapon <1/2> - Pick a Weapon Kit");
 						sender.sendMessage(B + "/Restart - Restarts server");
+						sender.sendMessage(B + "/Shotgun <amount> - 1-4 Shoots Arrows In your sign");
 						sender.sendMessage(B + "/Effect <1/2/3>");
 						sender.sendMessage(R + "/Sidekick6 To View the 6th Page");
 						System.out.println("[SideKick] " + playername + " used SideKick Page Five");
-						break;
-					case 6:
+						return true;  
+					}
+					else if (args[0].equalsIgnoreCase("6")){
 						sender.sendMessage(R + "------SideKick Page 6 Commands-----");
 						sender.sendMessage(B + "/// - Shuts down the server");
 						sender.sendMessage(B + "/Ip <Username> - Shows the ip of that user");
@@ -560,8 +564,9 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(B + "/Spawn - Goes to Spawn");
 						sender.sendMessage(R + "/Sidekick7 To View the 7th Page");
 						System.out.println("[SideKick] " + playername + " used SideKick Page Six");
-						break;
-					case 7:
+						return true;
+					}
+					else if (args[0].equalsIgnoreCase("7")){
 						sender.sendMessage(R + "------SideKick Page 7 Commands-----");
 						sender.sendMessage(B + "/InvClear <Username> - Clears that Players Inv");
 						sender.sendMessage(B + "/Read Rules To <Username> - Reads rules to player");
@@ -578,19 +583,19 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(G + "/Players - Shows Players");
 						sender.sendMessage(R + "/Sidekick8 To View the 8th Page");
 						System.out.println("[SideKick] " + playername + " used SideKick Page Seven");
-						break;
-					case 8:
+						return true;
+					}
+					else if (args[0].equalsIgnoreCase("8")){
 						sender.sendMessage(R + "------SideKick Page 8 Commands-----");
 						sender.sendMessage(B + "/PotionEffect ? - PotionEffect Help Menu");
 						sender.sendMessage(B + "/PotionEffect <EffectType> - Uses Potion Effect");
 						sender.sendMessage(B + "/PotionEffect <Player> <EffectType>");
 						System.out.println("[SideKick] " + playername + " used SideKick Page Eight");
-						break;
-						}
-					}catch (Exception i){
+						return true;
+					} else {
 						sender.sendMessage(R + "Please enter a valid page number!");
 					}
-				}
+				} 
 				return true;
 			}
 			//Menu 2 TWO MORE UNTIL OFF CLEAR
