@@ -1469,7 +1469,7 @@ public class SMain extends JavaPlugin{
 			}
 			return true;
 		}
-		//Message
+		//Message//TODO: Work?
 		else if (cmdLabel.equalsIgnoreCase("message") && has(p, "message")  ){
 			Player found = server.getPlayer(args[0]);
 			String playa = p.getName();
@@ -1479,8 +1479,9 @@ public class SMain extends JavaPlugin{
 					if (message != "") message += " ";
 					message += part;
 				}
+				String result = message.replace(sender.getName(), "");
 				found.sendMessage(Y + "----Message From " + ChatColor.AQUA + playa + Y + "----");
-				found.sendMessage(message);
+				found.sendMessage(result);
 				found.sendMessage(Y + "---------End of Message---------");
 				sender.sendMessage("Message Complete!");
 				return true;
