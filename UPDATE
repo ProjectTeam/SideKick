@@ -2,5 +2,5 @@
 -Removed Shotgun Command
 -Fixed why some mobs won't spawn.
 -Changed broadcast of PvP command
--Fixed why senders name was in message
+-Fixed why senders name was in message and warnings
 -Tweak on Menu

@@ -1045,6 +1045,7 @@ public class SMain extends JavaPlugin{
 					if (message != "") message += " ";
 					message += part;
 				}
+				String last = message.replace(sender.getName(), "");
 				found.sendMessage(Y + "----------" + R + "You have a Warning!" + Y + "----------");
 				found.sendMessage(message);
 				found.sendMessage(Y + "---------End of Message---------");
