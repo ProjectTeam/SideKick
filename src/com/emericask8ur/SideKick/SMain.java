@@ -1475,7 +1475,7 @@ public class SMain extends JavaPlugin{
 			}
 			return true;
 		}
-		//Message//TODO: Work?
+		//Message
 		else if (cmdLabel.equalsIgnoreCase("message") && has(p, "message")  ){
 			Player found = server.getPlayer(args[0]);
 			String playa = p.getName();
