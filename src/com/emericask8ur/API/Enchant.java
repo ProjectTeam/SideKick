@@ -2,10 +2,10 @@ package com.emericask8ur.API;
 
 import java.util.Map;
 
-import net.minecraft.server.ItemStack;
 
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 public class Enchant {
 	
