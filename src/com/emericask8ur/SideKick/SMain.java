@@ -1912,6 +1912,7 @@ public class SMain extends JavaPlugin{
 			p.getInventory().addItem(i);
 			p.getInventory().addItem(i2);
 			p.getInventory().addItem(i3);
+			return true;
 		}
 		//PlayerQuit
 		else if (cmdLabel.equalsIgnoreCase("quit") && has(p, "quit")  ){
