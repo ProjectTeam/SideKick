@@ -1731,6 +1731,7 @@ public class SMain extends JavaPlugin{
 		else if (cmdLabel.equalsIgnoreCase("heal") && has(p, "heal")  ){
 			if(args.length==0){
 				p.setHealth(20);
+				sender.sendMessage(G + "You have healed yourself!");
 			}
 			else if (args.length==1){
 			Player heal = server.getPlayer(args[0]);

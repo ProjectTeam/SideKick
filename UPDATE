@@ -1,3 +1,4 @@
+==Updates==
 -Fixed page number error
 -Removed Shotgun Command
 -Fixed why some mobs won't spawn.
@@ -5,3 +6,4 @@
 -Fixed why senders name was in message and warnings
 -Tweak on Menu
 -Updated Personal Enchantment API
+-Added message for /Heal if healing yourself.
