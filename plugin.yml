@@ -1,5 +1,5 @@
 name: SideKick
-version: 6.0
+version: 6.0.8
 main: com.emericask8ur.SideKick.SMain
 commands:
   SideKick:
