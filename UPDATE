@@ -8,3 +8,4 @@
 -Updated Personal Enchantment API
 -Added message for /Heal if healing yourself. 
 -Compatible with 1.2.5-R1.0
+-/Creative and /Survival now has optional arguments as /(Creative/Survival) [Player]

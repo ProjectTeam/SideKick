@@ -502,8 +502,8 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(B + "/BroadcastLoc - Broadcasts your loction to the server");
 						sender.sendMessage(B + "/Tools - Gives you tools");
 						sender.sendMessage(B + "/Fly - Allows you to Fly");
-						sender.sendMessage(G + "/Creative - Creative Mode");
-						sender.sendMessage(G + "/Survival - Normal Mode");
+						sender.sendMessage(G + "/Creative : [Player] - Creative Mode");
+						sender.sendMessage(G + "/Survival : [Player] - Normal Mode");
 						sender.sendMessage(B + "/XP <Fill/PlayerName> <Amount> - Fills you or Players XP to Amount");
 						sender.sendMessage(ChatColor.AQUA +"------World Gen Commands------");
 						sender.sendMessage(Y + "/GoTo <WorldName>");
@@ -1084,14 +1084,46 @@ public class SMain extends JavaPlugin{
 		}
 		//Creative------------------
 		else if (cmdLabel.equalsIgnoreCase("creative") && has(p, "creative")  ){
+			if(args.length==0){
 			p.setGameMode(GameMode.CREATIVE);
 			sender.sendMessage(G + "Your Game mode is Creative!");
+			return true;
+			}
+			else if (args.length==1){
+				Player play = server.getPlayer(args[0]);
+				if(play !=null){
+					play.setGameMode(GameMode.CREATIVE);
+					sender.sendMessage(G + "You have set " + args[0] + " to creative!");
+					play.sendMessage(G + "Your Game mode is survival!");
+					return true;
+				} else {
+					sender.sendMessage(R + "Player " + args[0] + " not found!");
+				}
+			} else {
+				sender.sendMessage(R + "Did you mean /Creative or /Creative [Player]");
+			}
 			return true;
 		}
 		//Survival-------------------
 		else if (cmdLabel.equalsIgnoreCase("survival") && has(p, "survival")  ){
+			if(args.length==0){
 			p.setGameMode(GameMode.SURVIVAL);
 			sender.sendMessage(G + "Your Game mode is Survival!");
+			return true;
+			} 
+			else if (args.length==1){
+				Player play = server.getPlayer(args[0]);
+				if(play !=null){
+				play.setGameMode(GameMode.SURVIVAL);
+				sender.sendMessage(G + "You have set " + args[0] + " to survival!");
+				play.sendMessage(G + "Your Game mode is survival!");
+				return true;
+			} else {
+				sender.sendMessage(R + "Player " + args[0] + " not found!");
+				} 
+			} else {
+				sender.sendMessage(R + "Did you mean /Creative or /Creative [Player]");
+			}
 			return true;
 		}
 		//TP TP--------------------------
