@@ -15,8 +15,8 @@ public class Enchant {
 	 * @param enchantment
 	 * @param level
 	 */
-	static void enchantItem(Player player, Enchantment enchantment, int level){
-		player.getItemInHand().addEnchantment(enchantment, level);
+	public static void enchantItem(Player player, Enchantment enchantment, int level, ItemStack itemstack){
+		itemstack.addEnchantment(enchantment, level);
 	}
 	
 	/**
@@ -24,7 +24,7 @@ public class Enchant {
 	 * @param player
 	 * @return
 	 */
-	static Map<Enchantment, Integer> getEnchantments(Player player){
+	public static Map<Enchantment, Integer> getEnchantments(Player player){
 		return player.getInventory().getItemInHand().getEnchantments();
 		
 	}
@@ -34,7 +34,7 @@ public class Enchant {
 	 * @param itemstack
 	 * @return
 	 */
-	static boolean isEnchanted(ItemStack itemstack){
+	public static boolean isEnchanted(ItemStack itemstack){
 		if(itemstack.getEnchantments() != null){
 			return true;
 		} else {
