@@ -1699,7 +1699,10 @@ public class SMain extends JavaPlugin{
 
 		}
 		//effect1
-		else if (cmdLabel.equalsIgnoreCase("effect") && args.length==1 && has(p, "effect")  ){
+		else if (cmdLabel.equalsIgnoreCase("effect") && has(p, "effect")  ){
+			if(!(args.length==1)){
+				sender.sendMessage(R + "Did you mean /Effect 1/2/3");
+			}
 			if(args[0].equalsIgnoreCase("1")){
 				p.getWorld().playEffect(p.getLocation(), Effect.EXTINGUISH, 0);
 				sender.sendMessage(B + "You have played Effect1!");
@@ -1714,7 +1717,10 @@ public class SMain extends JavaPlugin{
 				p.getWorld().playEffect(p.getLocation(), Effect.BOW_FIRE, A[0]);
 				sender.sendMessage(B + "You have played Effect3!");
 				return true;
+			} else {
+				sender.sendMessage(R + "Did you mean /Effect 1/2/3");
 			}
+			return true;
 		}
 		//Kick Command
 		else if (cmdLabel.equalsIgnoreCase("kick") && args.length ==1 && has(p, "kick")  ) {
