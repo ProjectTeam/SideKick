@@ -6,4 +6,5 @@
 -Fixed why senders name was in message and warnings
 -Tweak on Menu
 -Updated Personal Enchantment API
--Added message for /Heal if healing yourself.
+-Added message for /Heal if healing yourself. 
+-Compatible with 1.2.5-R1.0
