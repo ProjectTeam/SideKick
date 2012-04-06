@@ -741,6 +741,7 @@ public class SMain extends JavaPlugin{
 			if(!p.hasPermission("Sidekick.calculator")){
 				sender.sendMessage(R + "You do not have permission to use this!");
 			}
+			try{
 			if(args.length==3){
 				double x = Integer.parseInt(args[0]);
 				double y = Integer.parseInt(args[2]);
@@ -768,6 +769,9 @@ public class SMain extends JavaPlugin{
 				}
 			} else {
 				sender.sendMessage(R + "Did you mean /C <Number> <+,-,/,*> <Number>");
+			}
+			}catch (Exception i){
+				sender.sendMessage(R + "Cannot Calculate these numbers!");
 			}
 			return true;
 		}
