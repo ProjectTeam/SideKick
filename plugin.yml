@@ -322,7 +322,10 @@ commands:
    usage: /PotionEffect
   Sidekick8:
    description: Yes
-   usage: /Sidekick8
+   usage: /Sidekick8\
+  C:
+   description: Calculator
+   usage: /C
 permissions:
   Sidekick.use:
    description: Uses this plugin
@@ -597,6 +600,12 @@ permissions:
   Sidekick.potion:
    description: Creates Files for SideKick
    default: op
+  Sidekick.calculator:
+   description: Creates Files for SideKick
+   default: op
+
+
+
 
 
 

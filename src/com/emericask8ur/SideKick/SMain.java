@@ -454,7 +454,7 @@ public class SMain extends JavaPlugin{
 				System.out.println("[SideKick] " + playername + " used SideKick Page One");
 				return true;
 				}
-				//Numbers
+				//TODO: Marker for Num.
 				else if (args.length==1){
 					if(args[0].equalsIgnoreCase("1")){
 						sender.sendMessage(R + "-------SideKick Commands-------");
@@ -592,6 +592,7 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(B + "/PotionEffect ? - PotionEffect Help Menu");
 						sender.sendMessage(B + "/PotionEffect <EffectType> - Uses Potion Effect");
 						sender.sendMessage(B + "/PotionEffect <Player> <EffectType>");
+						sender.sendMessage(B + "/C <Number> <+,-,/,*> <Number> - Calculator");
 						System.out.println("[SideKick] " + playername + " used SideKick Page Eight");
 						return true;
 					} else {
@@ -600,6 +601,7 @@ public class SMain extends JavaPlugin{
 				} 
 				return true;
 			}
+			//TODO: Marker for End Num.
 			//Menu 2 TWO MORE UNTIL OFF CLEAR
 			else if (cmdLabel.equalsIgnoreCase("sidekick2")){
 				sender.sendMessage(R + "-------SideKick Page 2 Commands------");
@@ -637,6 +639,7 @@ public class SMain extends JavaPlugin{
 				sender.sendMessage(Y + "/GoTo <WorldName>");
 				sender.sendMessage(Y + "/Worldgen <Nether/Normal/End> <worldname> - World");
 				sender.sendMessage(Y + "/List Worlds - Lists All Worlds");
+				sender.sendMessage(Y + "/Worlds - Lists All Worlds");
 				sender.sendMessage(ChatColor.AQUA + "----------- End --------------");
 				sender.sendMessage(B + "/Spawner <Mob/Animal>");
 				sender.sendMessage(R + "Type /sidekick4 To View the 4rd Page");
@@ -723,6 +726,7 @@ public class SMain extends JavaPlugin{
 				sender.sendMessage(B + "/PotionEffect ? - PotionEffect Help Menu");
 				sender.sendMessage(B + "/PotionEffect <EffectType> - Uses Potion Effect");
 				sender.sendMessage(B + "/PotionEffect <Player> <EffectType>");
+				sender.sendMessage(B + "/C <Number> <+,-,/,*> <Number> - Calculator");
 				System.out.println("[SideKick] " + playername + " used SideKick Page Eight");
 				return true;
 				}
@@ -731,6 +735,40 @@ public class SMain extends JavaPlugin{
 		//Anti?
 		if (cmdLabel.equalsIgnoreCase("anti?") && has(p, "anti")   ){
 			sender.sendMessage("AntiBuild is a Mode that disables building for non ops! Repeat Command to turn mode off");
+			return true;
+		}
+		else if (cmdLabel.equalsIgnoreCase("c")){
+			if(!p.hasPermission("Sidekick.calculator")){
+				sender.sendMessage(R + "You do not have permission to use this!");
+			}
+			if(args.length==3){
+				double x = Integer.parseInt(args[0]);
+				double y = Integer.parseInt(args[2]);
+				if(args[1].equalsIgnoreCase("+")){
+					double z = x + y;
+					sender.sendMessage(args[0] + " + " + args[2] + " = "  + z);
+					return true;
+				}
+				else if (args[1].equalsIgnoreCase("-")){
+					double z = x - y;
+					sender.sendMessage(args[0] + " - " + args[2] + " = "  + z);
+					return true;
+				}
+				else if (args[1].equalsIgnoreCase("/")){
+					double z = x / y;
+					sender.sendMessage(args[0] + " / " + args[2] + " = "  + z);
+					return true;
+				}
+				else if (args[1].equalsIgnoreCase("*") || args[1].equalsIgnoreCase("x")){
+					double z = x * y;
+					sender.sendMessage(args[0] + " x " + args[2] + " = "  + z);
+					return true;
+				} else {
+					sender.sendMessage(R + "You can only use these: (x,/,+,-,*)");
+				}
+			} else {
+				sender.sendMessage(R + "Did you mean /C <Number> <+,-,/,*> <Number>");
+			}
 			return true;
 		}
 		//PotionEffect
