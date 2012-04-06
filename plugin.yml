@@ -26,6 +26,9 @@ commands:
   Weather:
    description: Sunny/sun
    usage: /Weather
+  Worlds:
+   description: Help Menu
+   usage: /Worlds
   PVP:
    description: Make it PVP 
    usage: /Pvp

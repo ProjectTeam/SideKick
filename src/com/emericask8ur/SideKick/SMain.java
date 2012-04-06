@@ -509,6 +509,7 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(Y + "/GoTo <WorldName>");
 						sender.sendMessage(Y + "/Worldgen <Nether/Normal/End> <worldname> - World");
 						sender.sendMessage(Y + "/List Worlds - Lists All Worlds");
+						sender.sendMessage(Y + "/Worlds - Lists All Worlds");
 						sender.sendMessage(ChatColor.AQUA + "----------- End --------------");
 						sender.sendMessage(B + "/Spawner <Mob/Animal>");
 						sender.sendMessage(R + "Type /sidekick4 To View the 4rd Page");
@@ -830,6 +831,27 @@ public class SMain extends JavaPlugin{
 					}
 					return true;
 				}
+			}
+			return true;
+		}
+		else if (cmdLabel.equalsIgnoreCase("worlds")){
+			if(!p.hasPermission("Sidekick.listworlds")){
+				sender.sendMessage(R + " You do not have permission to use this!");
+			}
+			if(args.length==0){
+				List<World> list = server.getWorlds();
+				String i = list.toString();
+				String ii = i.replace("{", "");
+				String iii = ii.replace("CraftWorld", "");
+				String x = iii.replace("name", "");
+				String xx = x.replace("=", "");
+				String xxx = xx.replace("}", "");
+				String z = xxx.replace("[", "");
+				String zz = z.replace("]", " , ");
+				sender.sendMessage("Worlds are: " + zz);
+				return true;
+			} else {
+				sender.sendMessage(R + "Did you mean /Worlds");
 			}
 			return true;
 		}
