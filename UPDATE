@@ -11,4 +11,4 @@
 -/Creative and /Survival now has optional arguments as /(Creative/Survival) [Player]
 -New way to list worlds /Worlds or /List Worlds
 -Added Basic Calculator Command
--Added new argument for Tp, now cause use /Tp [Player] or /Tp [Player] [Player]
+-Added new argument for Tp, now can use /Tp [Player] or /Tp [Player] [Player]
