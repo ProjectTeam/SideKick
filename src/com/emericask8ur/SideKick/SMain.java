@@ -1858,7 +1858,10 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//ThunderOff
-		else if (cmdLabel.equalsIgnoreCase("thunder") && args.length==1 && has(p, "weather")  ){
+		else if (cmdLabel.equalsIgnoreCase("thunder") && has(p, "weather")  ){
+			if(!(args.length==1)){
+				sender.sendMessage(R + "Did you mean /Thunder [On/Off]");
+			}
 			if(args[0].equalsIgnoreCase("off")){
 				w.setThundering(false);
 				sender.sendMessage(R + "Thunder is turned off, Command /Thunder On Enables it!");
@@ -1869,6 +1872,7 @@ public class SMain extends JavaPlugin{
 				sender.sendMessage(R + "Thunder is turned on, Command /Thunder off Disables it!");
 				return true;
 			}
+			return true;
 		}
 		//Super
 		else if (cmdLabel.equalsIgnoreCase("super") && has(p, "superjump")  ){
