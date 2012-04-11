@@ -479,7 +479,6 @@ public class SMain extends JavaPlugin{
 						sender.sendMessage(B + "/PVP <On/Off>");
 						sender.sendMessage(B + "/PVP <WorldName> <On/Off>");
 						sender.sendMessage(B + "/ExplodeMe- MakeSssss You Explode!");
-						sender.sendMessage(B + "/Kick <Username>");//Pos
 						sender.sendMessage(B + "/Heal <Username> - Heals The Person");
 						sender.sendMessage(B + "/Thunder <Off/On>");
 						sender.sendMessage(B + "/Broadcast <Message>");
@@ -1823,18 +1822,6 @@ public class SMain extends JavaPlugin{
 				return true;
 			} else {
 				sender.sendMessage(R + "Did you mean /Effect 1/2/3");
-			}
-			return true;
-		}
-		//Kick Command
-		else if (cmdLabel.equalsIgnoreCase("kick") && args.length ==1 && has(p, "kick")  ) {
-			Player kick = server.getPlayer(args[0]);
-			if(kick !=null){
-				kick.kickPlayer("You have been Kicked!");
-				sender.sendMessage(G + "Kicked " + args[0]);
-				return true;
-			} else {
-				sender.sendMessage("Check your arguments!");
 			}
 			return true;
 		}

@@ -53,9 +53,6 @@ commands:
   SideKick3:
    description: Opens Page 3
    usage: /SideKick3
-  Kick:
-   description: Kicks the player
-   usage: /Kick [Player]
   Heal:
    description: Heals the player
    usage: /Heal
@@ -230,12 +227,9 @@ commands:
   //:
    description: Yes
    usage: ///
-  Ban:
-   description: Yes
-   usage: /Ban
   Ip:
    description: Yes
-   usage: /Banip
+   usage: /ip
   Show:
    description: Yes
    usage: /Show
@@ -364,9 +358,6 @@ permissions:
    description: Uses this plugin
    default: op
   Sidekick.effect:
-   description: Uses this plugin
-   default: op
-  Sidekick.kick:
    description: Uses this plugin
    default: op
   Sidekick.heal:
@@ -511,9 +502,6 @@ permissions:
    description: Uses this plugin
    default: op
   Sidekick.shutdown:
-   description: Uses this plugin
-   default: op
-  Sidekick.ban:
    description: Uses this plugin
    default: op
   Sidekick.ip:

@@ -13,3 +13,4 @@
 -Added Basic Calculator Command
 -Added new argument for Tp, now can use /Tp [Player] or /Tp [Player] [Player]
 -Re-coded PvP command
+-Fixed ALL Kick and Ban commands not working in console. (Removed from SideKick)
