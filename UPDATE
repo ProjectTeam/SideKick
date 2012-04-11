@@ -12,3 +12,4 @@
 -New way to list worlds /Worlds or /List Worlds
 -Added Basic Calculator Command
 -Added new argument for Tp, now can use /Tp [Player] or /Tp [Player] [Player]
+-Re-coded PvP command

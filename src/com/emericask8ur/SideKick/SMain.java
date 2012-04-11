@@ -1725,35 +1725,43 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//PVP true
-		else if (cmdLabel.equalsIgnoreCase("pvp") && args.length > 0 && has(p, "pvp")  ){
+		else if (cmdLabel.equalsIgnoreCase("pvp") && has(p, "pvp")  ){
 			if(args.length==1){
 				if(args[0].equalsIgnoreCase("on")){
-					w.setPVP(true);
-					sender.sendMessage(R + "You set PVP On!");
-					server.broadcastMessage(ChatColor.AQUA + "PvP Status: " + ChatColor.GREEN + "On");
+					p.getWorld().setPVP(true);
+					server.broadcastMessage(ChatColor.AQUA + "PvP Status: " + G + "On");
+					return true;
 				}
 				else if (args[0].equalsIgnoreCase("off")){
-					w.setPVP(false);
-					sender.sendMessage(R + " You set PVP Off!");
-					server.broadcastMessage(ChatColor.AQUA + "PvP Status: " + ChatColor.RED + "Off");
+					p.getWorld().setPVP(false);
+					server.broadcastMessage(ChatColor.AQUA + "PvP Status: " + R + "Off");
+					return true;
+				} else {
+					sender.sendMessage(R + "Did you mean /PvP [On/Off]");
+				}
+				return true;
+			}//end length1
+			else if (args.length==2){
+				World wo = server.getWorld(args[0]);
+				if(wo == null){
+					sender.sendMessage(R + "World not found!");
+				}
+				if(args[1].equalsIgnoreCase("on")){
+					wo.setPVP(true);
+					server.broadcastMessage(ChatColor.AQUA + args[0] + " PvP Status: " + R + "On");
 					return true;
 				}
+				else if(args[1].equalsIgnoreCase("off")){
+					wo.setPVP(true);
+					server.broadcastMessage(ChatColor.AQUA + args[0] + " PvP Status: " + R + "Off");
+					return true;
+				} else {
+					sender.sendMessage(R + "Did you mean /PvP [On/Off] or /PvP [WorldName] [On/Off]");
+				}
+			} else {
+				sender.sendMessage(R + "Did you mean /PvP [On/Off] or /PvP [WorldName] [On/Off]");
 			}
-			else if(args.length ==2){
-					World wa = server. getWorld(args[0]);
-					if(wa !=null){
-						if(args[1].equalsIgnoreCase("on")){
-							wa.setPVP(true);
-							sender.sendMessage(G + "World: " + ChatColor.DARK_PURPLE + args[0] + ChatColor.BLUE + " set true to PVP");
-						}
-						else if (args[1].equalsIgnoreCase("off")){
-							wa.setPVP(false);
-							sender.sendMessage(G + "World: " + ChatColor.DARK_PURPLE + args[0] + ChatColor.BLUE + " set false to PVP");
-						}
-					}
-					return true;
-				}
-			return true;
+				return true;
 		}
 		//Broadcast1
 		else if (cmdLabel.equalsIgnoreCase("broadcast1") && has(p, "broadcast1")  ){
