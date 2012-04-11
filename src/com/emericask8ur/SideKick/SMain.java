@@ -743,8 +743,8 @@ public class SMain extends JavaPlugin{
 			}
 			try{
 			if(args.length==3){
-				double x = Integer.parseInt(args[0]);
-				double y = Integer.parseInt(args[2]);
+				double x = Double.parseDouble(args[0]);
+				double y = Double.parseDouble(args[2]);
 				if(args[1].equalsIgnoreCase("+")){
 					double z = x + y;
 					sender.sendMessage(args[0] + " + " + args[2] + " = "  + z);
@@ -2088,9 +2088,9 @@ public class SMain extends JavaPlugin{
 					sender.sendMessage("God Mode Enabled!");
 				} else {
 					sender.sendMessage("God Mode Disabled!");
-				}
-				return true;
+				}//args 0
 			}
+			return true;
 		}
 		//AntiBuild 
 		else if (cmdLabel.equalsIgnoreCase("antibuild") && has(p, "antibuild")  ){
