@@ -445,8 +445,8 @@ public class SMain extends JavaPlugin{
 				sender.sendMessage(B + "/Weather <Sun/Storm>");
 				sender.sendMessage(B + "/Time <Day/Night>");
 				sender.sendMessage(B + "/ClearInv - Clears out your inv");
-				sender.sendMessage(B + "/Teleport <Username> or /Tp <Username> - You to someone");
-				sender.sendMessage(B + "/ToMe <Username> - Teleports the player to you!");
+				sender.sendMessage(B + "/Tp [Player] | /Tp [Player] [Player] - Teleport Players");
+				sender.sendMessage(B + "/ToMe <Username> | /Tp [Player] [Player] - To you or Others");
 				sender.sendMessage(B + "/God - Take No Damage, God Mode");
 				sender.sendMessage(Y + "/Info- Shows version and Info about it");
 				sender.sendMessage(B + "/Add Under <Block> <X> <Y> <Z> -Replaces Block Within Radius");
@@ -2076,6 +2076,21 @@ public class SMain extends JavaPlugin{
 			} else {
 				sender.sendMessage("Player not found!!");
 				}
+			}
+			else if (args.length==2){
+				Player player = server.getPlayer(args[0]);
+				Player play = server.getPlayer(args[1]);
+				if(player == null){
+					sender.sendMessage(R + "Player " + args[0] + " not found!");
+				}
+				if(play == null){
+					sender.sendMessage(R + "Player " + args[1] + " not found!");
+				}
+				player.teleport(play.getLocation());
+				sender.sendMessage(Y + "Player " + args[0] + " teleported to " + args[1]);
+				return true;
+			} else {
+				sender.sendMessage(R + "Did you mean /Tp <Player> | /Tp <Player> <Player>");
 			}
 			return true;
 		}
