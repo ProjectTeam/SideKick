@@ -1,12 +1,12 @@
 Devs who want to be apart of SideKick, Pull Request and follow these guidelines:
 
-�Generally follow the Oracle coding standards.
-�Use tabs, no spaces.
-�All pull requests must have a sign-off by using the Git bash command
+-Generally follow the Oracle coding standards.
+-Use tabs, no spaces.
+-All pull requests must have a sign-off by using the Git bash command
 git commit -s -m 'Commit message'
-�No trailing whitespaces.
-�No 80 column limit or midstatement newlines.
-�Pull requests must compile and work.
-�Pull requests must be formatted properly.
-�No merges should be included in pull requests unless the pull request's purpose is a merge.
-�Number of commits in a pull request should be kept to one commit and all additional commits must be squashed and signed off. 
+-No trailing whitespaces.
+-No 80 column limit or midstatement newlines.
+-Pull requests must compile and work.
+-Pull requests must be formatted properly.
+-No merges should be included in pull requests unless the pull request's purpose is a merge.
+-Number of commits in a pull request should be kept to one commit and all additional commits must be squashed and signed off. 
