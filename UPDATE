@@ -3,3 +3,4 @@
 -Fixed GameMode permission bug allowing players with Sidekick.creative and Sidekick.survival to change other users gamemode. Fixes SIDEKICK-7.
 -Implemented optional extra argument for /ChangeName, if user has permission, user can use /Changename [Player] [Name]. Addresses SIDEKICK-3.
 -Fixed /Message and /Warn giving console error with few arguments. Fixes SIDEKICK-1.
+-Added Permission node for /Save. Addresses SIDEKICK-10.
