@@ -2100,8 +2100,18 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//Save
-		else if (cmdLabel.equalsIgnoreCase("save")  ){
-			p.setFireTicks(0);
+		else if (cmdLabel.equalsIgnoreCase("save")){
+			if(args.length==0){
+				if(p.hasPermission("Sidekick.save")){
+				p.setFireTicks(0);
+				sender.sendMessage(ChatColor.YELLOW + "Fire removed!");
+				return true;
+				} else {
+					sender.sendMessage(R + "You do not have permission!");
+				}
+			} else {
+				sender.sendMessage(R + "Did you mean /Save");
+			}
 			return true;
 		}
 		//Tp
