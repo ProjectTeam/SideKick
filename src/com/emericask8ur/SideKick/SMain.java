@@ -439,7 +439,7 @@ public class SMain extends JavaPlugin{
 				if(args.length==0){
 				sender.sendMessage(R + "-------SideKick Commands-------");
 				sender.sendMessage(Purp + "Welcome " + R + p.getName());
-				sender.sendMessage(B + "/ChangeName <Username>");
+				sender.sendMessage(B + "/ChangeName <Name> : [Player] [Name]");
 				sender.sendMessage(B + "/i <ItemName>");
 				sender.sendMessage(qq + "/Edit <Block> - Edits a block to any type, Type /edit? for info");
 				sender.sendMessage(B + "/Weather <Sun/Storm>");
@@ -459,7 +459,7 @@ public class SMain extends JavaPlugin{
 					if(args[0].equalsIgnoreCase("1")){
 						sender.sendMessage(R + "-------SideKick Commands-------");
 						sender.sendMessage(Purp + "Welcome " + R + p.getName());
-						sender.sendMessage(B + "/ChangeName <Username>");
+						sender.sendMessage(B + "/ChangeName <Name> : [Player] [Name]");
 						sender.sendMessage(B + "/i <ItemName>");
 						sender.sendMessage(qq + "/Edit <Block> - Edits a block to any type, Type /edit? for info");
 						sender.sendMessage(B + "/Weather <Sun/Storm>");
