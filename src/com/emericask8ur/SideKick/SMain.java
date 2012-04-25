@@ -1109,12 +1109,14 @@ public class SMain extends JavaPlugin{
 					if (message != "") message += " ";
 					message += part;
 				}
+				try{
 				String last = message.replace(sender.getName(), "");
 				found.sendMessage(Y + "----------" + R + "You have a Warning!" + Y + "----------");
 				found.sendMessage(last);
 				found.sendMessage(Y + "---------End of Message---------");
 				sender.sendMessage("Message Complete!");
 				return true;
+				}catch (Exception i){sender.sendMessage(R + "Warning could not be sent!");}
 			} else {
 				sender.sendMessage(G + "Player Not found!");
 			}
@@ -1597,12 +1599,14 @@ public class SMain extends JavaPlugin{
 					if (message != "") message += " ";
 					message += part;
 				}
+				try{
 				String result = message.replace(sender.getName(), "");
 				found.sendMessage(Y + "----Message From " + ChatColor.AQUA + playa + Y + "----");
 				found.sendMessage(result);
 				found.sendMessage(Y + "---------End of Message---------");
 				sender.sendMessage("Message Complete!");
 				return true;
+				}catch (Exception i){sender.sendMessage(R + "Message could not be sent!");}
 			} else {
 				sender.sendMessage(G + "Player Not found!");
 			}
