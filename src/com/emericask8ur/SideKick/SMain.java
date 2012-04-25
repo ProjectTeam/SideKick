@@ -1146,14 +1146,19 @@ public class SMain extends JavaPlugin{
 			}
 		}
 		//Creative------------------
-		else if (cmdLabel.equalsIgnoreCase("creative") && has(p, "creative")  ){
+		else if (cmdLabel.equalsIgnoreCase("creative")){
 			if(args.length==0){
+				if(p.hasPermission("Sidekick.creative")){
 			p.setGameMode(GameMode.CREATIVE);
 			sender.sendMessage(G + "Your Game mode is Creative!");
 			return true;
+				} else {
+					sender.sendMessage(R + "You do not have permission!");
+				}
 			}
 			else if (args.length==1){
 				Player play = server.getPlayer(args[0]);
+				if(p.hasPermission("Sidekick.creative.other")){
 				if(play !=null){
 					play.setGameMode(GameMode.CREATIVE);
 					sender.sendMessage(G + "You have set " + args[0] + " to creative!");
@@ -1162,20 +1167,28 @@ public class SMain extends JavaPlugin{
 				} else {
 					sender.sendMessage(R + "Player " + args[0] + " not found!");
 				}
+				} else {
+					sender.sendMessage(R + "You do not have permission!");
+				}
 			} else {
 				sender.sendMessage(R + "Did you mean /Creative or /Creative [Player]");
 			}
 			return true;
 		}
 		//Survival-------------------
-		else if (cmdLabel.equalsIgnoreCase("survival") && has(p, "survival")  ){
+		else if (cmdLabel.equalsIgnoreCase("survival")){
 			if(args.length==0){
+				if(p.hasPermission("Sidekick.survival")){
 			p.setGameMode(GameMode.SURVIVAL);
 			sender.sendMessage(G + "Your Game mode is Survival!");
 			return true;
+				} else {
+					sender.sendMessage(R + "You do not have permission!");
+				}
 			} 
 			else if (args.length==1){
 				Player play = server.getPlayer(args[0]);
+				if(p.hasPermission("Sidekick.survival.other")){
 				if(play !=null){
 				play.setGameMode(GameMode.SURVIVAL);
 				sender.sendMessage(G + "You have set " + args[0] + " to survival!");
@@ -1184,6 +1197,9 @@ public class SMain extends JavaPlugin{
 			} else {
 				sender.sendMessage(R + "Player " + args[0] + " not found!");
 				} 
+				} else {
+					sender.sendMessage(R + "You do not have permission!");
+				}
 			} else {
 				sender.sendMessage(R + "Did you mean /Creative or /Creative [Player]");
 			}
