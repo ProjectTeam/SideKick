@@ -1659,10 +1659,33 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//Change Name
-		else if (cmdLabel.equalsIgnoreCase("changename") && args.length == 1 && has(p, "changename")  ) {	   
-			p.setDisplayName(args[0]);
-			p.sendMessage(R + "You have changed your name!");
-			return true;	      
+		else if (cmdLabel.equalsIgnoreCase("changename")) {
+			if (args.length == 1) {
+				if (p.hasPermission("Sidekick.chagename")) {
+					p.setDisplayName(args[0]);
+					p.sendMessage(R + "You have changed your name!");
+					return true;
+				} else {
+					sender.sendMessage(R + "You do not have permission!");
+				}
+			}
+			else if (args.length == 2){
+				if(p.hasPermission("Sidekick.changename.other")){
+					Player play = server.getPlayer(args[0]);
+					if(play == null){
+						sender.sendMessage(R + "Player not found!");
+					} else {
+						play.setDisplayName(args[1]);
+						sender.sendMessage(ChatColor.YELLOW + "You changed player: " + qq + play.getName() + ChatColor.YELLOW  + " to: " + args[1]);
+						return true;
+					}
+				}else {
+					sender.sendMessage(R + "You do not have permission!");//end perm
+				}
+			} else {
+				sender.sendMessage(R + "Did you mean /Changename [Name] or /Changename [Player] [Name]");
+			}
+			return true;
 		}
 		//Send Command
 		else if (cmdLabel.equalsIgnoreCase("send") && args.length==3 && has(p, "send")  ){
