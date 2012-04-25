@@ -1,3 +1,4 @@
 ==Updates==
 -Added API for Sidekicks menu
 -Fixed GameMode permission bug allowing players with Sidekick.creative and Sidekick.survival to change other users gamemode. Fixes SIDEKICK-7.
+-Implemented optional extra argument for /ChangeName, if user has permission, user can use /Changename [Player] [Name]. Addresses SIDEKICK-3.
