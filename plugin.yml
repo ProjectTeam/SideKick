@@ -591,6 +591,18 @@ permissions:
   Sidekick.calculator:
    description: Creates Files for SideKick
    default: op
+  Sidekick.creative.other:
+   description: Permission
+   default: op
+  Sidekick.survival.other:
+   description: Permission
+   default: op
+  Sidekick.changename.other:
+   description: Permission
+   default: op
+  Sidekick.save:
+   description: Permission
+   default: op
 
 
 
