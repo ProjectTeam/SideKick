@@ -1,16 +1,3 @@
 ==Updates==
--Fixed page number error
--Removed Shotgun Command
--Fixed why some mobs won't spawn.
--Changed broadcast of PvP command
--Fixed why senders name was in message and warnings
--Tweak on Menu
--Updated Personal Enchantment API
--Added message for /Heal if healing yourself. 
--Compatible with 1.2.5-R1.0
--/Creative and /Survival now has optional arguments as /(Creative/Survival) [Player]
--New way to list worlds /Worlds or /List Worlds
--Added Basic Calculator Command
--Added new argument for Tp, now can use /Tp [Player] or /Tp [Player] [Player]
--Re-coded PvP command
--Fixed ALL Kick and Ban commands not working in console. (Removed from SideKick)
+-Added API for Sidekicks menu
+-Fixed GameMode permission bug allowing players with Sidekick.creative and Sidekick.survival to change other users gamemode. Fixes SIDEKICK-7.
