@@ -20,6 +20,9 @@ commands:
   Weapon:
    description: Weapons
    usage: /Weapon
+  SetSpawn:
+   description: SetSpawn
+   usage: /SetSpawn
   Sell:
    description: Weapons
    usage: /Sell
@@ -68,9 +71,6 @@ commands:
   ClearInv:
    description: Clears your inv
    usage: /ClearInv
-  SetSpawn:
-   description: Sets spawn
-   usage: /SetSpawn
   SpawnLoc:
    description: Shows spawn loc
    usage: /SpawnLoc
@@ -254,9 +254,6 @@ commands:
   Send:
    description: Yes
    usage: /Send
-  SetSpawn:
-   description: Yes
-   usage: /SetSpawn
   Spawn:
    description: Yes
    usage: /Spawn
@@ -601,6 +598,9 @@ permissions:
    description: Permission
    default: op
   Sidekick.save:
+   description: Permission
+   default: op
+  Sidekick.setspawn:
    description: Permission
    default: op
 
