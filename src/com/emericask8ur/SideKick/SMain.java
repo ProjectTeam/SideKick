@@ -914,11 +914,6 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//Setspawn
-		else if (cmdLabel.equalsIgnoreCase("setspawn") && has(p, "setspawn")   ){
-			w.setSpawnLocation(p.getLocation().getBlockX(), p.getLocation().getBlockY(), p.getLocation().getBlockZ());
-			sender.sendMessage(G + "You have set spawn at your location!");
-			return true;
-		}
 		//// Add command
 		else if (cmdLabel.equalsIgnoreCase("add") && args.length > 2 && has(p, "blockadd")  ) {
 			String edittype = args[0];
@@ -1229,6 +1224,20 @@ public class SMain extends JavaPlugin{
 		else if (cmdLabel.equalsIgnoreCase("restart") && has(p, "restart")  ){
 			server.reload();
 			sender.sendMessage(G + "Restart Complete");
+			return true;
+		}
+		//SetSpawn------------
+		else if (cmdLabel.equalsIgnoreCase("setspawn") && has(p, "setspawn")  ){
+			int x = p.getLocation().getBlockX();
+			int y = p.getLocation().getBlockY();
+			int z = p.getLocation().getBlockZ();
+			if(args.length==0){
+				w.setSpawnLocation(x, y, z);
+				sender.sendMessage(G + "Spawn set at your location!");
+			} else {
+				w.setSpawnLocation(x, y, z);
+				sender.sendMessage(G + "Spawn set at your location!");
+			}
 			return true;
 		}
 		//Xp-------
