@@ -5,3 +5,4 @@
 -Fixed /Message and /Warn giving console error with few arguments. Fixes SIDEKICK-1.
 -Added Permission node for /Save. Addresses SIDEKICK-10.
 -Made item Value listing more efficient in the config.
+-Updated SideKicks menu, now uses API
