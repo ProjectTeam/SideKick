@@ -1718,8 +1718,12 @@ public class SMain extends JavaPlugin{
 			else if (args.length==1){
 			Player tel = server.getPlayer(args[0]);
 			if(tel !=null){
+				try{
 				p.teleport(server.getPlayer(args[0]).getLocation());
 				p.sendMessage(ChatColor.GREEN + "Teleported you to " + ChatColor.BLUE + server.getPlayer(args[0]).getName());
+				}catch (Exception i){
+					sender.sendMessage(R + "Cannot perform teleport!");
+				}
 				return true;
 			} else {
 				sender.sendMessage("Player not found!!");
@@ -1734,8 +1738,12 @@ public class SMain extends JavaPlugin{
 				if(play == null){
 					sender.sendMessage(R + "Player " + args[1] + " not found!");
 				}
+				try{
 				player.teleport(play.getLocation());
 				sender.sendMessage(Y + "Player " + args[0] + " teleported to " + args[1]);
+				}catch (Exception i){
+					sender.sendMessage(R + "Cannot perform teleport!");
+				}
 				return true;
 			} else {
 				sender.sendMessage(R + "Did you mean /Tp <Player> | /Tp <Player> <Player>");
