@@ -1751,7 +1751,27 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//God Mode
-		else if (cmdLabel.equalsIgnoreCase("god") && has(p, "god")  ){
+		else if (cmdLabel.equalsIgnoreCase("god")){
+			try{
+			if(args.length==1){
+				if(!(p.hasPermission("Sidekick.god.other"))){
+					sender.sendMessage(R + "You do not have permission!");
+				}
+				Player play = server.getPlayer(args[0]);
+				PlayerInfo tri = PlayerInfo.get(play);
+				tri.godmode = !tri.godmode;
+				if(play !=null){
+					if(tri.godmode){
+						sender.sendMessage(G + "God mode " + G + "enabled" + G + " for user " + ChatColor.YELLOW + play.getName());
+					} else {
+						sender.sendMessage(G + "God mode " + R + "disabled" + G + " for user " + ChatColor.YELLOW + play.getName());
+					}
+				} else {
+					sender.sendMessage(R + "Player not found!");
+				}
+				return true;
+			}
+			else if (args.length==0){
 			if(p.hasPermission("SideKick.god")){
 				PlayerInfo pi = PlayerInfo.get(p);
 				pi.godmode = !pi.godmode;
@@ -1762,6 +1782,8 @@ public class SMain extends JavaPlugin{
 				}//args 0
 			}
 			return true;
+			}
+			}catch (Exception i){}
 		}
 		//AntiBuild 
 		else if (cmdLabel.equalsIgnoreCase("antibuild") && has(p, "antibuild")  ){
