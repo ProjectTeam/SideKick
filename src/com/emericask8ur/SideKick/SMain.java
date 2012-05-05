@@ -53,15 +53,6 @@ public class SMain extends JavaPlugin{
 	public static String plugindir = "plugins/SideKick/";
 	public static File cfg = new File(plugindir + "BlackList.yml");
 	
-	/**
-	 * this.getDescription().getVersion();
-	 * @return Plugin Version
-	 */
-	public String Version(){
-		
-		return "Version: " + this.getDescription().getVersion();
-	}
-	
 	public double getItemValue(Material type) {
 		if (itemValues.containsKey(type)) { 
 			return itemValues.get(type);
@@ -73,7 +64,6 @@ public class SMain extends JavaPlugin{
 	@Override
 	public void onDisable() {
 		saveConfig();
-		System.out.println(Version());
 	}
 	//TODO: onEnabled
 	@Override 
@@ -83,7 +73,6 @@ public class SMain extends JavaPlugin{
 		pm.registerEvents(new BL(), this);
 		pm.registerEvents(new HashMapz1(), this);
 		loadConfig();
-		System.out.println(Version());
 		HashMapz.setItems();
 		PotionEffects.setPotions();
 		System.out.println("Follow @emericask8ur on Twitter for SideKick updates");
@@ -1418,7 +1407,7 @@ public class SMain extends JavaPlugin{
 		}
 		//Shows version Info -------------------------------- Update
 		else if (cmdLabel.equalsIgnoreCase("info") && has(p, "info")  ){
-			sender.sendMessage(G + Version() +  " Created by emericask8ur. Follow him on twitter: @emericask8ur");
+			sender.sendMessage(G + this.getDescription().getVersion() +  " Created by emericask8ur. Follow him on twitter: @emericask8ur");
 			return true;
 		}
 		//TimeDay
