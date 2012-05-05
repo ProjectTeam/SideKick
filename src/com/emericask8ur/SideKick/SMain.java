@@ -1947,8 +1947,6 @@ public class SMain extends JavaPlugin{
 			} else {
 				sender.sendMessage("Invalid Arguments!");
 			}
-		} else {
-			sender.sendMessage("Unknown command!");
 		}
 		return true;
 	}
