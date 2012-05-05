@@ -40,6 +40,7 @@ import org.bukkit.potion.PotionEffectType;
 
 import org.bukkit.util.Vector;
 
+import com.emericask8ur.API.Back;
 import com.emericask8ur.API.Menu;
 
 import FileWriter.WriteFile;
@@ -347,6 +348,22 @@ public class SMain extends JavaPlugin{
 			}
 			}catch (Exception i){
 				sender.sendMessage(R + "Cannot Calculate these numbers!");
+			}
+			return true;
+		}
+		//Back
+		else if (cmdLabel.equalsIgnoreCase("back")){
+			if(!(p.hasPermission("Sidekick.back"))){
+				sender.sendMessage(R + "You do not have permission!");
+			}
+			if(!(args.length==0)){
+				sender.sendMessage(R + "Did you mean /Back");
+			}
+			if(Back.back.containsKey(playername)){
+				p.teleport(Back.getBackLocation(playername));
+				sender.sendMessage(G + "Back to location");
+			} else {
+				sender.sendMessage(R + "No where to go back!");
 			}
 			return true;
 		}

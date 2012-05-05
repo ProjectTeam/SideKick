@@ -5,6 +5,9 @@ commands:
   SideKick:
    description: Help Menu
    usage: /SideKick
+  Back:
+   description: Back
+   usage: /Back
   SideKick2:
    description: Next Help Page
    usage: /SideKick
@@ -601,6 +604,9 @@ permissions:
    description: Permission
    default: op
   Sidekick.setspawn:
+   description: Permission
+   default: op
+  Sidekick.back:
    description: Permission
    default: op
 
