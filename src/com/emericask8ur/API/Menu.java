@@ -142,6 +142,7 @@ public class Menu {
 		sender.sendMessage(B + "/PotionEffect <EffectType> - Uses Potion Effect");
 		sender.sendMessage(B + "/PotionEffect <Player> <EffectType>");
 		sender.sendMessage(B + "/C <Number> <+,-,/,*> <Number> - Calculator");
+		sender.sendMessage(G + "/Back - Send you back to prev. location");
 	}
 
 }
