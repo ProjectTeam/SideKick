@@ -1661,26 +1661,6 @@ public class SMain extends JavaPlugin{
 			p.getInventory().addItem(i3);
 			return true;
 		}
-		//PlayerQuit
-		else if (cmdLabel.equalsIgnoreCase("quit") && has(p, "quit")  ){
-			PL.Quit =!PL.Quit;
-			if (PL.Quit){
-				sender.sendMessage("If A Player Quits Server Will Announce Now!");
-			} else {
-				sender.sendMessage("A Quit Message Will Not Be Broadcasted!");
-			}
-			return true;	    		
-		}
-		//Join
-		else if (cmdLabel.equalsIgnoreCase("join") && has(p, "join")  ){
-			PL.Join =!PL.Join;
-			if(PL.Join){
-				sender.sendMessage("If A Player Joins Server Will Announce Now!");
-			} else {
-				sender.sendMessage("A join Message Will Not Be Broadcasted");
-			}
-			return true;
-		}
 		//beware
 		else if (cmdLabel.equalsIgnoreCase("beware") && has(p, "beware")  ){
 			BL.SignC =!BL.SignC;

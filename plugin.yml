@@ -122,12 +122,6 @@ commands:
   Tools:
    description: Gives you Tools you need
    usage: /Tools
-  Quit:
-   description: Tells you when a player Quits
-   usage: /Quit
-  Join:
-   description: Tells you when a player Joins
-   usage: /Join
   Beware:
    description: Makes a Beware sign
    usage: /Beware
@@ -400,12 +394,6 @@ permissions:
    description: Uses this plugin
    default: op
   Sidekick.tools:
-   description: Uses this plugin
-   default: op
-  Sidekick.quit:
-   description: Uses this plugin
-   default: op
-  Sidekick.join:
    description: Uses this plugin
    default: op
   Sidekick.beware:

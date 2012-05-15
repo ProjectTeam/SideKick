@@ -74,8 +74,6 @@ public class Menu {
 		sender.sendMessage(R + "------SideKick Page 4 Commands-----");
 		sender.sendMessage(B + "/Mysterybox- Break IronBlock and receive Mystery!");
 		sender.sendMessage(B + "/NoMobs - Kills all Mobs");
-		sender.sendMessage(B + "/Quit - Alerts you when someone Leaves");
-		sender.sendMessage(B + "/Join - Alerts you when someone Joins");
 		sender.sendMessage(B + "/Beware - Lets you create a Colored [Beware] Sign");
 		sender.sendMessage(B + "/LoginKit - When a Player joins, will receive a Start kit");
 		sender.sendMessage(B + "/Save - Removes Fire Ticks when on fire");
