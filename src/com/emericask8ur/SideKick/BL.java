@@ -104,12 +104,6 @@ public class BL implements Listener{
 		}
 	}
 	@EventHandler(priority = EventPriority.NORMAL)
-	public void onPortalCreate(PortalCreateEvent event){
-		if(portal){
-		event.setCancelled(true);
-	}	
-	}
-	@EventHandler(priority = EventPriority.NORMAL)
 	public void onBlockBurn(BlockBurnEvent event){
 		if(burn){
 			event.setCancelled(true);
