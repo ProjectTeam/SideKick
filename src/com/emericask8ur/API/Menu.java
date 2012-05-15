@@ -18,6 +18,7 @@ public class Menu {
 		sender.sendMessage(Purp + "Welcome " + R + p.getName());
 		sender.sendMessage(B + "/ChangeName <Name> : [Player] [Name]");
 		sender.sendMessage(B + "/i <ItemName>");
+		sender.sendMessage(B + "/Give [Player] [Item] <Amount>| /Give [Item]");
 		sender.sendMessage(qq + "/Edit <Block> - Edits a block to any type, Type /edit? for info");
 		sender.sendMessage(B + "/Weather <Sun/Storm>");
 		sender.sendMessage(B + "/Time <Day/Night>");
