@@ -14,4 +14,4 @@
 -Added Back API
 -Added /Back
 -Implemented /Give [Player] [Item] <Amount> (Optional arugments: [Player] <Amount>) Should work with TMI mod.
--Removed commands /Join, /Quit
+-Removed commands /Join, /Quit, /Beware
