@@ -1821,25 +1821,88 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//give
-		else if (cmdLabel.equalsIgnoreCase("give") && args.length==1 && has(p, "item")  ){
-			int data = -1;
-		    int index = args[0].lastIndexOf(':');
-		    if (index != -1) {
-		        try {
-		        	data = Byte.parseByte(args[0].substring(index + 1));
-		        	args[0] = args[0].substring(0, index);
-		        } catch (Exception ex) {}
-		    }
-			Material type = HashMapz.getMaterial(args[0]);
-			if (type == null) {
-				sender.sendMessage(R + "Invalid item name");
+		else if (cmdLabel.equalsIgnoreCase("give") && has(p, "item")  ){
+			if(args.length==1){
+				int data = -1;
+			    int index = args[0].lastIndexOf(':');
+			    if (index != -1) {
+			        try {
+			        	data = Byte.parseByte(args[0].substring(index + 1));
+			        	args[0] = args[0].substring(0, index);
+			        } catch (Exception ex) {}
+			    }
+				Material type = HashMapz.getMaterial(args[0]);
+				if (type == null) {
+					sender.sendMessage(R + "Invalid item name");
+					return true;
+				}
+				ItemStack item = new ItemStack(type, type.getMaxStackSize());
+				if (data != -1) item.setDurability((short) data);
+				try{
+				p.getInventory().addItem(item);
+				sender.sendMessage(G + "You gave yourself: " + args[0]);
 				return true;
+				}catch (Exception i){}
+				return true;	  
 			}
-			ItemStack item = new ItemStack(type, type.getMaxStackSize());
-			if (data != -1) item.setDurability((short) data);
-			p.getInventory().addItem(item);
-			sender.sendMessage(G + "You gave yourself: " + args[0]);
-			return true;	  
+			else if (args.length==2){
+				Player player = server.getPlayer(args[0]);
+				if(player == null){
+					sender.sendMessage(R + "Player not found!");
+				}
+				int data = -1;
+			    int index = args[1].lastIndexOf(':');
+			    if (index != -1) {
+			        try {
+			        	data = Byte.parseByte(args[1].substring(index + 1));
+			        	args[1] = args[1].substring(0, index);
+			        } catch (Exception ex) {}
+			    }
+				Material type = HashMapz.getMaterial(args[1]);
+				if (type == null) {
+					sender.sendMessage(R + "Invalid item name");
+					return true;
+				}
+				ItemStack item = new ItemStack(type, type.getMaxStackSize());
+				if (data != -1) item.setDurability((short) data);
+				try{
+				player.getInventory().addItem(item);
+				sender.sendMessage(G + "You gave yourself: " + args[1]);
+				return true;
+				}catch (Exception i){}
+				return true;	  
+			}
+			else if (args.length==3){
+				int amount = Integer.parseInt(args[2]);
+				Player player = server.getPlayer(args[0]);
+				if(player == null){
+					sender.sendMessage(R + "Player not found!");
+				}
+				int data = -1;
+			    int index = args[1].lastIndexOf(':');
+			    if (index != -1) {
+			        try {
+			        	data = Byte.parseByte(args[1].substring(index + 1));
+			        	args[1] = args[1].substring(0, index);
+			        } catch (Exception ex) {}
+			    }
+				Material type = HashMapz.getMaterial(args[1]);
+				if (type == null) {
+					sender.sendMessage(R + "Invalid item name");
+					return true;
+				}
+				ItemStack item = new ItemStack(type, amount);
+				if (data != -1) item.setDurability((short) data);
+				try{
+				player.getInventory().addItem(item);
+				sender.sendMessage(G + "You gave yourself: " + args[1]);
+				return true;
+				}catch (Exception i){sender.sendMessage(R + "Enter a valid amount");}
+				return true;	
+			} else {
+				sender.sendMessage(R + "Did you mean /Give [Player] [Item] <Amount> or /Give [Item]");
+			}
+			return true;
 		}
 		//File
 		else if (cmdLabel.equalsIgnoreCase("rules")){
