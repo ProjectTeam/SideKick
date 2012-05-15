@@ -104,17 +104,6 @@ public class BL implements Listener{
 		}
 	}
 	@EventHandler(priority = EventPriority.NORMAL)
-	public void onSignChange(SignChangeEvent event){ 
-	Player p  = event.getPlayer();
-	String playername = p.getName();
-		if(SignC){
-		  if(event.getLine(0).contains("[Beware]")) event.setLine(0, "§4[Beware]");	  			  
-		}
-		if(SignCh){
-			if (event.getLine(0).contains("[Name]")) event.setLine(0, "§5" + playername);
-	}
-	}
-	@EventHandler(priority = EventPriority.NORMAL)
 	public void onPortalCreate(PortalCreateEvent event){
 		if(portal){
 		event.setCancelled(true);

@@ -1661,16 +1661,6 @@ public class SMain extends JavaPlugin{
 			p.getInventory().addItem(i3);
 			return true;
 		}
-		//beware
-		else if (cmdLabel.equalsIgnoreCase("beware") && has(p, "beware")  ){
-			BL.SignC =!BL.SignC;
-			if(BL.SignC){
-				sender.sendMessage("Place a Sign Called [Beware] and it will make a Colored Beware Sign!");
-			} else {
-				sender.sendMessage("beware off!");
-			}
-			return true;
-		}
 		//LoginKit
 		else if (cmdLabel.equalsIgnoreCase("loginkit") && has(p, "loginkit")  ){
 			PL.TheKit = !PL.TheKit;

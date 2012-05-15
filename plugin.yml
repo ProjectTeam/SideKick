@@ -122,9 +122,6 @@ commands:
   Tools:
    description: Gives you Tools you need
    usage: /Tools
-  Beware:
-   description: Makes a Beware sign
-   usage: /Beware
   LoginKit:
    description: Gives on join a login kit
    usage: /LoginKit
@@ -394,9 +391,6 @@ permissions:
    description: Uses this plugin
    default: op
   Sidekick.tools:
-   description: Uses this plugin
-   default: op
-  Sidekick.beware:
    description: Uses this plugin
    default: op
   Sidekick.loginkit:
