@@ -245,9 +245,6 @@ commands:
   All:
    description: Yes
    usage: /All
-  Send:
-   description: Yes
-   usage: /Send
   Spawn:
    description: Yes
    usage: /Spawn
@@ -508,9 +505,6 @@ permissions:
    description: Uses this plugin
    default: op
   Sidekick.all:
-   description: Uses this plugin
-   default: op
-  Sidekick.send:
    description: Uses this plugin
    default: op
   Sidekick.setspawn:

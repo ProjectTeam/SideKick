@@ -110,7 +110,6 @@ public class Menu {
 		sender.sendMessage(G + "/Message <Username> <Message>");
 		sender.sendMessage(G + "/Set <Username> <CustomName> - Changes the users name");
 		sender.sendMessage(B + "/Advertise <Message> - Advertise");
-		sender.sendMessage(B + "/Send To <UserName> <Item> - Sends the item to the Player");
 		sender.sendMessage(B + "/SetSpawn - Sets Spawn at your Location");
 		sender.sendMessage(B + "/Spawn - Goes to Spawn");
 		sender.sendMessage(R + "/Sidekick7 To View the 7th Page");
