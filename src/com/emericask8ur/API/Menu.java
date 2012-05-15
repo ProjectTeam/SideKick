@@ -59,7 +59,6 @@ public class Menu {
 		sender.sendMessage(B + "/Fly - Allows you to Fly");
 		sender.sendMessage(G + "/Creative : [Player] - Creative Mode");
 		sender.sendMessage(G + "/Survival : [Player] - Normal Mode");
-		sender.sendMessage(B + "/XP <Fill/PlayerName> <Amount> - Fills you or Players XP to Amount");
 		sender.sendMessage(ChatColor.AQUA +"------World Gen Commands------");
 		sender.sendMessage(Y + "/GoTo <WorldName>");
 		sender.sendMessage(Y + "/Worldgen <Nether/Normal/End> <worldname> - World");

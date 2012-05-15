@@ -185,9 +185,6 @@ commands:
   Restart:
    description: Help Menu
    usage: /Restart
-  XP:
-   description: Help Menu
-   usage: /XP 
   Kill:
    description: Kills yourself
    usage: /Kill
@@ -442,9 +439,6 @@ permissions:
    description: Uses this plugin
    default: op
   Sidekick.restart:
-   description: Uses this plugin
-   default: op
-  Sidekick.xp:
    description: Uses this plugin
    default: op
   Sidekick.kill:

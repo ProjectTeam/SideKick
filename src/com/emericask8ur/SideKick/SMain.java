@@ -810,28 +810,6 @@ public class SMain extends JavaPlugin{
 			}
 			return true;
 		}
-		//Xp-------
-		else if (cmdLabel.equalsIgnoreCase("xp") && args.length > 0 && has(p, "xp")  ){
-			if(args.length==2){
-				Player pla = server.getPlayer(args[0]);
-				int x = Integer.parseInt(args[1]);
-				if(pla !=null){
-					pla.setTotalExperience(x);
-					return true;
-				} else {
-					sender.sendMessage(R + "Player not found!");
-				}
-				return true;
-			}
-			else if(args.length==1){
-			if(args[0].equalsIgnoreCase("fill")){
-				p.setTotalExperience(max);
-				sender.sendMessage(G + "XP Filled!");
-				return true;
-			  }
-			}
-			return true;
-		}
 		//Kill----------
 		else if (cmdLabel.equalsIgnoreCase("kill") && args.length==1 && has(p, "kill")  ){
 			Player play = server.getPlayer(args[0]);
