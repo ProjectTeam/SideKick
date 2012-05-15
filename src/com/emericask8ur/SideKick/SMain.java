@@ -625,30 +625,7 @@ public class SMain extends JavaPlugin{
 				return true;
 			}
 			return true;
-		}
-		//Mode Changer
-		else if (cmdLabel.equalsIgnoreCase("mode") && has(p, "mode")  ){
-			if(!(args.length==3)){sender.sendMessage(R + "Check your arguments!");}
-			if(args[0].equalsIgnoreCase("change")){
-				Player play = server.getPlayer(args[1]);
-				if(play !=null){
-					if(args[2].equalsIgnoreCase("survival")){
-						play.setGameMode(GameMode.SURVIVAL);
-						sender.sendMessage(G + args[1] + " GameMode changed to Survival!");
-						return true;
-					}
-					else if (args[2].equalsIgnoreCase("creative")){
-						play.setGameMode(GameMode.CREATIVE);
-						sender.sendMessage(G + args[1] + " GameMode changed to Creative!");
-						return true;
-					}
-				} else {
-					sender.sendMessage(R + "Player not found!");
-				}
-				return true;
-			}
-			return true;
-		}
+		}	
 		//invClear
 		else if (cmdLabel.equalsIgnoreCase("invclear")  && (has(p, "clearinventory")  )){
 			if(!(args.length==1)){sender.sendMessage(R + "Did you mean /InvClear <Player>");}
