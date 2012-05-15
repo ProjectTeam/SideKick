@@ -13,3 +13,4 @@
 -Code Clean up
 -Added Back API
 -Added /Back
+-Implemented /Give [Player] [Item] <Amount> (Optional arugments: [Player] <Amount>) Should work with TMI mod.
