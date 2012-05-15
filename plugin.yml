@@ -251,9 +251,6 @@ commands:
   List:
    description: Yes
    usage: /List
-  Mode:
-   description: Yes
-   usage: /Mode
   InvClear:
    description: Yes
    usage: /InvClear
@@ -516,9 +513,6 @@ permissions:
   Sidekick.listworlds:
    description: Uses this plugin
    default: op
-  Sidekick.mode:
-   description: Uses this plugin
-   default: op
   Sidekick.read:
    description: Uses this plugin
    default: op
@@ -529,9 +523,6 @@ permissions:
    description: Uses this plugin
    default: op
   Sidekick.move:
-   description: Uses this plugin
-   default: op
-  Sidekick.mode:
    description: Uses this plugin
    default: op
   Sidekick.warn:

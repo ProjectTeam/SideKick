@@ -121,7 +121,6 @@ public class Menu {
 		sender.sendMessage(B + "/Read Rules To <Username> - Reads rules to player");
 		sender.sendMessage(B + "/Player Spawn <Username> - Teleports user to Spawn");
 		sender.sendMessage(B + "/Move To <WorldName> - Teleports everyone to you in that world");
-		sender.sendMessage(B + "/Mode Change <Username> <Mode> ");
 		sender.sendMessage(B + "/Log Breaks - Logs in Cmd every Block Broken");
 		sender.sendMessage(B + "/Warn <Player> <Message>");
 		sender.sendMessage(B + "/Disable Creeper - Enables and Disables creeper explosions");
