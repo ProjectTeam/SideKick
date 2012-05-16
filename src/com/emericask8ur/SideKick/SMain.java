@@ -628,6 +628,7 @@ public class SMain extends JavaPlugin{
 		}	
 		//invClear
 		else if (cmdLabel.equalsIgnoreCase("invclear")  && (has(p, "clearinventory")  )){
+			try{
 			if(!(args.length==1)){sender.sendMessage(R + "Did you mean /InvClear <Player>");}
 			Player play = server.getPlayer(args[0]);
 			if(play !=null){
@@ -638,6 +639,7 @@ public class SMain extends JavaPlugin{
 				sender.sendMessage(R + "Player Not Found!");
 			}
 			return true;
+			}catch (Exception i){sender.sendMessage(R + "Did you mean /Give [Player] [Item] <Amount> or /Give [Item]");}
 		}
 		//Read 
 		else if (cmdLabel.equalsIgnoreCase("read") && args.length==3 && has(p, "read")  ){
@@ -1747,6 +1749,7 @@ public class SMain extends JavaPlugin{
 		}
 		//give
 		else if (cmdLabel.equalsIgnoreCase("give") && has(p, "item")  ){
+			try{
 			if(args.length==1){
 				int data = -1;
 			    int index = args[0].lastIndexOf(':');
@@ -1828,6 +1831,7 @@ public class SMain extends JavaPlugin{
 				sender.sendMessage(R + "Did you mean /Give [Player] [Item] <Amount> or /Give [Item]");
 			}
 			return true;
+			}catch (Exception i){sender.sendMessage(R + "Did you mean /Give [Player] [Item] <Amount> or /Give [Item]");}
 		}
 		//File
 		else if (cmdLabel.equalsIgnoreCase("rules")){
