@@ -830,12 +830,6 @@ public class SMain extends JavaPlugin{
 			sender.sendMessage(G + "Food Level Set Maxed!");
 			return true;
 		}
-		//Water
-		else if (cmdLabel.equalsIgnoreCase("dehydrator") && has(p, "water")  ) {	
-			p.setExhaustion(0);
-			sender.sendMessage(G + "Exhaustion decreased");
-			return true;
-		}
 		//Edit
 		else if (cmdLabel.equalsIgnoreCase("edit") && args.length==1 && has(p, "edit")  ){
 			Block target = p.getTargetBlock(null, 200);
