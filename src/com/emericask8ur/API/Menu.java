@@ -90,7 +90,6 @@ public class Menu {
 		sender.sendMessage(G + "/Sell - Sells the Item in your hand");
 		sender.sendMessage(Y + "-----------------------------------------------------");
 		sender.sendMessage(B + "/Nofire - Disables Block Burning Mode");
-		sender.sendMessage(B + "/Dehydrator - Puts your dehydrator level to 0");
 		sender.sendMessage(B + "/Eat - Fills your Food Bar Up");
 		sender.sendMessage(B + "/Weapon <1/2> - Pick a Weapon Kit");
 		sender.sendMessage(B + "/Restart - Restarts server");
