@@ -193,9 +193,6 @@ commands:
   Eat:
    description: Eat
    usage: /Eat
-  Dehydrator:
-   description: Drink
-   usage: /Dehydrator
   Edit:
    description: Change blocks
    usage: /Eat
