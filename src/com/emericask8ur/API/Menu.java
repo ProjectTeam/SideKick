@@ -25,7 +25,7 @@ public class Menu {
 		sender.sendMessage(B + "/ClearInv - Clears out your inv");
 		sender.sendMessage(B + "/Tp [Player] | /Tp [Player] [Player] - Teleport Players");
 		sender.sendMessage(B + "/ToMe <Username> | /Tp [Player] [Player] - To you or Others");
-		sender.sendMessage(B + "/God - Take No Damage, God Mode");
+		sender.sendMessage(B + "/God | /God [Username] - Take No Damage, God Mode");
 		sender.sendMessage(Y + "/Info- Shows version and Info about it");
 		sender.sendMessage(B + "/Add Under <Block> <X> <Y> <Z> -Replaces Block Within Radius");
 		sender.sendMessage(R + "Type /Sidekick2 To turn to page 2");
