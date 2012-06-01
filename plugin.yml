@@ -1,0 +1,645 @@
+name: SideKick
+version: 7.0
+main: com.emericask8ur.SideKick.SMain
+author: emericask8ur (ProjectTeam)
+description: Server manager, commands, multi-world, anti-grief, and chat plugin
+commands:
+  SideKick:
+   description: Help Menu
+   usage: /SideKick
+  Back:
+   description: Back
+   usage: /Back
+  SideKick2:
+   description: Next Help Page
+   usage: /SideKick
+  SideKick6:
+   description: Next Help Page
+   usage: /SideKick
+  SideKick7:
+   description: Next Help Page
+   usage: /SideKick
+  ChangeName:
+   description: Changed your name
+   usage: /ChangeName [Player]
+  Weapon:
+   description: Weapons
+   usage: /Weapon
+  SetSpawn:
+   description: SetSpawn
+   usage: /SetSpawn
+  Sell:
+   description: Weapons
+   usage: /Sell
+  Weather:
+   description: Sunny/sun
+   usage: /Weather
+  Worlds:
+   description: Help Menu
+   usage: /Worlds
+  PVP:
+   description: Make it PVP 
+   usage: /Pvp
+  Broadcast1:
+   description: Broadcast1
+   usage: /Broadcast1
+  Broadcast2:
+   description: Broadcast2
+   usage: /Broadcast2
+  ExplodeMe:
+   description: Kills yourself
+   usage: /ExplodeMe
+  Info:
+   description: Info
+   usage: /Info
+  Time:
+   description: Time  command
+   usage: /Time
+  Effect:
+   description: Playes a Effect!
+   usage: /Effect
+  SideKick3:
+   description: Opens Page 3
+   usage: /SideKick3
+  Heal:
+   description: Heals the player
+   usage: /Heal
+  Thunder:
+   description: Turns Thunder 
+   usage: /Thunder
+  RealMode:
+   description: Turns on RealMode Beta
+   usage: /RealMode
+  Super:
+   description: Turns on Super jump and Speed
+   usage: /Super
+  ClearInv:
+   description: Clears your inv
+   usage: /ClearInv
+  SpawnLoc:
+   description: Shows spawn loc
+   usage: /SpawnLoc
+  Location:
+   description: Shows your current location
+   usage: /Location
+  BroadCastLoc:
+   description: Broadcast your location
+   usage: /BroadCastLoc
+  SuperOff:
+   description: Super off
+   usage: /SuperOff
+  I:
+   description: Spawns items
+   usage: /I [ItemName]
+  RealMode?:
+   description: Help Menu
+   usage: /RealMode?
+  AFK:
+   description: Away From Key-Board
+   usage: /AFK
+  AFKOFF:
+   description: BACK FROM KEYBOARD
+   usage: /AFKOFF
+  SideKick4:
+   description: SideKick4 Page
+   usage: /SideKick4
+  MysteryBox:
+   description: Activates a fun Gamble game
+   usage: /MysteryBox
+  Teleport:
+   description: Teleports to player
+   usage: /Teleport [Player]
+  ToolLast:
+   description: Tools always last
+   usage: /ToolLast
+  NoMobs:
+   description: Kills all Mobs
+   usage: /NoMobs
+  WorldGen:
+   description: Generates new World
+   usage: /WorldGen
+  Spawn:
+   description: Goes to spawn
+   usage: /Spawn
+  Tools:
+   description: Gives you Tools you need
+   usage: /Tools
+  LoginKit:
+   description: Gives on join a login kit
+   usage: /LoginKit
+  Save:
+   description: Saves
+   usage: /Save
+  TP:
+   description: TP Shortcut 
+   usage: /TP [Player]
+  God:
+   description: No Damage, God Mode
+   usage: /God
+  AntiBuild:
+   description: No Building Tool
+   usage: /AntiBuild
+  Anti?:
+   description: Help Menu for AntiBuild
+   usage: /Anti?
+  SignName:
+   description: SignName Colored playername sign
+   usage: /SignName
+  Portal:
+   description: Portal activate and off
+   usage: /Portal
+  Give:
+   description: Give items another way instead of shortcut
+   usage: /Give
+  Rules:
+   description: Rules
+   usage: /Rules
+  SK:
+   description: Shows money
+   usage: /SK money 
+  Sneaks:
+   description: Disables Sneaking
+   usage: /Sneaks
+  SideKick5:
+   description: 5th Menu
+   usage: /SideKick5
+  NoFire:
+   description: Nofire
+   usage: /NoFire
+  Fly:
+   description: Flying
+   usage: /Fly
+  Prefix:
+   description: Help Menu
+   usage: /Prefix [Name]
+  Suffix:
+   description: Help Menu
+   usage: /Suffix [Name]
+  Creative:
+   description: Help Menu
+   usage: /Creative 
+  Survival:
+   description: Help Menu
+   usage: /Survival
+  ToMe:
+   description: Help Menu
+   usage: /ToMe [Player]
+  Restart:
+   description: Help Menu
+   usage: /Restart
+  Kill:
+   description: Kills yourself
+   usage: /Kill
+  Eat:
+   description: Eat
+   usage: /Eat
+  Edit:
+   description: Change blocks
+   usage: /Eat
+  Edit?:
+   description: Change blocks
+   usage: /Edit?
+  GoTo:
+   description: Worlds
+   usage: /GoTo
+  Broadcast:
+   description: Yes
+   usage: /Broadcast
+  Chat:
+   description: Yes
+   usage: /Chat
+  Both:
+   description: Yes
+   usage: /Both
+  Spawner:
+   description: Yes
+   usage: /Spawner
+  //:
+   description: Yes
+   usage: ///
+  Ip:
+   description: Yes
+   usage: /ip
+  Show:
+   description: Yes
+   usage: /Show
+  G:
+   description: Yes
+   usage: /G [Player]
+  Strike:
+   description: Yes
+   usage: /Strike
+  Message:
+   description: Yes
+   usage: /Message
+  Set:
+   description: Yes
+   usage: /Set
+  Advertise:
+   description: Yes
+   usage: /Advertise
+  All:
+   description: Yes
+   usage: /All
+  Spawn:
+   description: Yes
+   usage: /Spawn
+  List:
+   description: Yes
+   usage: /List
+  InvClear:
+   description: Yes
+   usage: /InvClear
+  Read:
+   description: Yes
+   usage: /InvClear
+  Player:
+   description: Yes
+   usage: /Player
+  Log:
+   description: Yes
+   usage: /Log
+  Move:
+   description: Yes
+   usage: /Log
+  Warn:
+   description: Yes
+   usage: /Warn
+  Disable:
+   description: Yes
+   usage: /Disable
+  add:
+   description: Yes
+   usage: /Add Under [type] [y]/[x] [z]/[x] [y] [z]
+  WhoIs:
+   description: Yes
+   usage: /WhoIs
+  World:
+   description: Yes
+   usage: /World
+  LastSeen:
+   description: Yes
+   usage: /LastSeen [Player]
+  Create:
+   description: Yes
+   usage: /Create [Filename] [output]
+  Wear:
+   description: Yes
+   usage: /Wear
+  Console:
+   description: Yes
+   usage: /Console
+  Players:
+   description: Yes
+   usage: /Players
+  PotionEffect:
+   description: Yes
+   usage: /PotionEffect
+  Sidekick8:
+   description: Yes
+   usage: /Sidekick8
+  C:
+   description: Calculator
+   usage: /C
+permissions:
+  Sidekick.use:
+   description: Uses this plugin
+   default: op
+  Sidekick.anti:
+   description: Uses this plugin
+   default: op
+  Sidekick.realmode:
+   description: Uses this plugin
+   default: op
+  Sidekick.changename:
+   description: Uses this plugin
+   default: op
+  Sidekick.weapon:
+   description: Uses this plugin
+   default: op
+  Sidekick.weather:
+   description: Uses this plugin
+   default: op
+  Sidekick.pvp:
+   description: Uses this plugin
+   default: op
+  Sidekick.broadcast1:
+   description: Uses this plugin
+   default: op
+  Sidekick.broadcast2:
+   description: Uses this plugin
+   default: op
+  Sidekick.explodeme:
+   description: Uses this plugin
+   default: op
+  Sidekick.info:
+   description: Uses this plugin
+   default: op
+  Sidekick.time:
+   description: Uses this plugin
+   default: op
+  Sidekick.effect:
+   description: Uses this plugin
+   default: op
+  Sidekick.heal:
+   description: Uses this plugin
+   default: op
+  Sidekick.superjump:
+   description: Uses this plugin
+   default: op
+  Sidekick.clearinventory:
+   description: Uses this plugin
+   default: op
+  Sidekick.location:
+   description: Uses this plugin
+   default: op
+  Sidekick.broadcastlocation:
+   description: Uses this plugin
+   default: op
+  Sidekick.item:
+   description: Uses this plugin
+   default: op
+  Sidekick.realmode?:
+   description: Uses this plugin
+   default: op
+  Sidekick.afkmessage:
+   description: Uses this plugin
+   default: op
+  Sidekick.mysterybox:
+   description: Uses this plugin
+   default: op
+  Sidekick.teleport:
+   description: Uses this plugin
+   default: op
+  Sidekick.nomobs:
+   description: Uses this plugin
+   default: op
+  Sidekick.toollast:
+   description: Uses this plugin
+   default: op
+  Sidekick.worldgen:
+   description: Uses this plugin
+   default: op
+  Sidekick.tools:
+   description: Uses this plugin
+   default: op
+  Sidekick.loginkit:
+   description: Uses this plugin
+   default: op
+  Sidekick.god:
+   description: Uses this plugin
+   default: op
+  Sidekick.antibuild:
+   description: Uses this plugin
+   default: op
+  Sidekick.signname:
+   description: Uses this plugin
+   default: op
+  Sidekick.portal:
+   description: Uses this plugin
+   default: op
+  Sidekick.rules:
+   description: Uses this plugin
+   default: op
+  Sidekick.sneaks:
+   description: Uses this plugin
+   default: op
+  Sidekick.nofire:
+   description: Uses this plugin
+   default: op
+  Sidekick.fly:
+   description: Uses this plugin
+   default: op
+  Sidekick.sk.money:
+   description: Uses this plugin
+   default: op
+  Sidekick.sk.pay:
+   description: Uses this plugin
+   default: op
+  Sidekick.sk.give:
+   description: Uses this plugin
+   default: op
+  Sidekick.pvp:
+   description: Uses this plugin
+   default: op
+  Sidekick.suffix:
+   description: Uses this plugin
+   default: op
+  Sidekick.prefix:
+   description: Uses this plugin
+   default: op
+  Sidekick.survival:
+   description: Uses this plugin
+   default: op
+  Sidekick.creative:
+   description: Uses this plugin
+   default: op
+  Sidekick.tome:
+   description: Uses this plugin
+   default: op
+  Sidekick.restart:
+   description: Uses this plugin
+   default: op
+  Sidekick.kill:
+   description: Uses this plugin
+   default: op
+  Sidekick.eat:
+   description: Uses this plugin
+   default: op
+  Sidekick.water:
+   description: Uses this plugin
+   default: op
+  Sidekick.edit:
+   description: Uses this plugin
+   default: op
+  Sidekick.edit?:
+   description: Uses this plugin
+   default: op
+  Sidekick.world:
+   description: Uses this plugin
+   default: op
+  Sidekick.broadcast:
+   description: Uses this plugin
+   default: op
+  Sidekick.chat:
+   description: Uses this plugin
+   default: op
+  Sidekick.both:
+   description: Uses this plugin
+   default: op
+  Sidekick.spawner:
+   description: Uses this plugin
+   default: op
+  Sidekick.shutdown:
+   description: Uses this plugin
+   default: op
+  Sidekick.ip:
+   description: Uses this plugin
+   default: op
+  Sidekick.show:
+   description: Uses this plugin
+   default: op
+  Sidekick.g:
+   description: Uses this plugin
+   default: op
+  Sidekick.strike:
+   description: Uses this plugin
+   default: op
+  Sidekick.message:
+   description: Uses this plugin
+   default: op
+  Sidekick.set:
+   description: Uses this plugin
+   default: op
+  Sidekick.advertise:
+   description: Uses this plugin
+   default: op
+  Sidekick.all:
+   description: Uses this plugin
+   default: op
+  Sidekick.setspawn:
+   description: Uses this plugin
+   default: op
+  Sidekick.spawn:
+   description: Uses this plugin
+   default: op
+  Sidekick.listworlds:
+   description: Uses this plugin
+   default: op
+  Sidekick.read:
+   description: Uses this plugin
+   default: op
+  Sidekick.player:
+   description: Uses this plugin
+   default: op
+  Sidekick.log:
+   description: Uses this plugin
+   default: op
+  Sidekick.move:
+   description: Uses this plugin
+   default: op
+  Sidekick.warn:
+   description: Uses this plugin
+   default: op
+  Sidekick.sell:
+   description: Uses this plugin
+   default: op
+  Sidekick.blockadd:
+   description: Uses this plugin
+   default: op
+  Sidekick.whois:
+   description: Uses this plugin
+   default: op
+  Sidekick.worldpvp:
+   description: Uses this plugin
+   default: op
+  Sidekick.lastseen:
+   description: Uses this plugin
+   default: op
+  Sidekick.file:
+   description: Creates Files for SideKick
+   default: op
+  Sidekick.override:
+   description: Creates Files for SideKick
+   default: op
+  Sidekick.wear:
+   description: Creates Files for SideKick
+   default: op
+  Sidekick.potion:
+   description: Creates Files for SideKick
+   default: op
+  Sidekick.calculator:
+   description: Creates Files for SideKick
+   default: op
+  Sidekick.creative.other:
+   description: Permission
+   default: op
+  Sidekick.survival.other:
+   description: Permission
+   default: op
+  Sidekick.changename.other:
+   description: Permission
+   default: op
+  Sidekick.save:
+   description: Permission
+   default: op
+  Sidekick.setspawn:
+   description: Permission
+   default: op
+  Sidekick.back:
+   description: Permission
+   default: op
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
