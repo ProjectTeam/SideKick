@@ -1,17 +1,3 @@
 ==Updates==
--Added API for Sidekicks menu
--Fixed GameMode permission bug allowing players with Sidekick.creative and Sidekick.survival to change other users gamemode. Fixes SIDEKICK-7.
--Implemented optional extra argument for /ChangeName, if user has permission, user can use /Changename [Player] [Name]. Addresses SIDEKICK-3.
--Fixed /Message and /Warn giving console error with few arguments. Fixes SIDEKICK-1.
--Added Permission node for /Save. Addresses SIDEKICK-10.
--Made item Value listing more efficient in the config.
--Updated SideKicks menu, now uses API
--Improved TP command
--Added ability to God Other players(Sidekick.god.other)
--Fixed Unknown command message.
--Implemented Economy API
--Code Clean up
--Added Back API
--Added /Back
--Implemented /Give [Player] [Item] <Amount> (Optional arugments: [Player] <Amount>) Should work with TMI mod.
--Removed commands /Join, /Quit, /Beware, /Send, /Mode Change, /XP, /Dehydrator
+-Clean Ups
+-Renamed packages.
