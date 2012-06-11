@@ -73,7 +73,7 @@ public class SMain extends JavaPlugin{
 		PluginManager pm = getServer().getPluginManager();
 		pm.registerEvents(new PL(), this);
 		pm.registerEvents(new BL(), this);
-		pm.registerEvents(new HashMapz1(), this);
+		pm.registerEvents(new EL(), this);
 		loadConfig();
 		HashMapz.setItems();
 		PotionEffects.setPotions();
@@ -899,8 +899,8 @@ public class SMain extends JavaPlugin{
 		//Disable
 		else if (cmdLabel.equalsIgnoreCase("disable") && args.length==1 && has(p, "world")  ){
 			if(args[0].equalsIgnoreCase("creeper")) {
-				HashMapz1.creeper = !HashMapz1.creeper;
-				if (HashMapz1.creeper) {
+				EL.creeper = !EL.creeper;
+				if (EL.creeper) {
 					sender.sendMessage(R + "Exlosion will happen!");
 				} else {
 					sender.sendMessage(B + "Creepers will not explode!");
@@ -1510,8 +1510,8 @@ public class SMain extends JavaPlugin{
 		}
 		//REAL MODE 
 		else if (cmdLabel.equalsIgnoreCase("realmode") && has(p, "realmode")  ){
-			HashMapz1.usePorkDrops = !HashMapz1.usePorkDrops;
-			if (HashMapz1.usePorkDrops) {
+			EL.usePorkDrops = !EL.usePorkDrops;
+			if (EL.usePorkDrops) {
 				sender.sendMessage("Players will now drop pork.");
 			} else {
 				sender.sendMessage("Players will no longer drop pork.");
