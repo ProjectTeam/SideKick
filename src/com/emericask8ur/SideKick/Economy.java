@@ -50,8 +50,9 @@ public class Economy {
 		double y = x - amount;
 		if(!(Economy.getMoney(string) <= 0)){
 		Economy.economy.put(string, y);
-		} else {
-			System.out.println("[SideKick] Economy cannot subtract amount from " + string + " because the user doesnt have enough!");
+		} 
+		if(Economy.getMoney(string) < 0){
+			System.out.println("[SideKick] Warning! " + string + " has a negative amount of money!");
 		}
 	}
 
