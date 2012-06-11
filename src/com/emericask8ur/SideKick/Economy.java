@@ -55,5 +55,18 @@ public class Economy {
 			System.out.println("[SideKick] Warning! " + string + " has a negative amount of money!");
 		}
 	}
+	
+	/**
+	 * Checks if a player has a balance that's greater than 0
+	 * @param string
+	 * @return
+	 */
+	public static boolean canPay(String string){
+		if(Economy.getMoney(string) < 0){
+			return false;
+		} else {
+			return true;
+		}
+	}
 
 }
