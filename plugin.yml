@@ -1,6 +1,6 @@
 name: SideKick
 version: 7.0
-main: com.emericask8ur.SideKick.SMain
+main: com.ProjectTeam.SideKick.SMain
 author: emericask8ur (ProjectTeam)
 description: Server manager, commands, multi-world, anti-grief, and chat plugin
 commands:
