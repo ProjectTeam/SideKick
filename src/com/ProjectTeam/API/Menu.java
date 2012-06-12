@@ -5,19 +5,13 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class Menu {
-		static ChatColor R = ChatColor.RED;
-		static ChatColor B = ChatColor.BLUE;
-		static ChatColor Y = ChatColor.YELLOW;
-		static ChatColor Purp = ChatColor.LIGHT_PURPLE;
-		static ChatColor G = ChatColor.GREEN;
-		static ChatColor qq = ChatColor.AQUA;
 	
-		static ChatColor R = ChatColor.RED;
-		static ChatColor B = ChatColor.BLUE;
-		static ChatColor Y = ChatColor.YELLOW;
-		static ChatColor Purp = ChatColor.LIGHT_PURPLE;
-		static ChatColor G = ChatColor.GREEN;
-		static ChatColor qq = ChatColor.AQUA;
+	static ChatColor R = ChatColor.RED;
+	static ChatColor B = ChatColor.BLUE;
+	static ChatColor Y = ChatColor.YELLOW;
+	static ChatColor Purp = ChatColor.LIGHT_PURPLE;
+	static ChatColor G = ChatColor.GREEN;
+	static ChatColor qq = ChatColor.AQUA;
 		
 		private static boolean x(CommandSender sender, String node){
 			if(sender.hasPermission(node)){
