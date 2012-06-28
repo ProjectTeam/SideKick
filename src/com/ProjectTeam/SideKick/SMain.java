@@ -935,7 +935,10 @@ public class SMain extends JavaPlugin{
 		//Spawner
 		else if (cmdLabel.equalsIgnoreCase("spawner") && args.length==1 && has(p,"spawner")  ){
 			Block t = p.getTargetBlock(null, 200);
-			Location tl = t.getLocation();
+			Location tll = t.getLocation();
+			Block block = tll.getBlock();
+			Block x = block.getRelative(BlockFace.UP);
+			Location tl = x.getLocation();
 			if (args[0].equalsIgnoreCase("chicken")){
 				t.getWorld().spawnCreature(tl, EntityType.CHICKEN);
 				sender.sendMessage(Y + "You have spawned a chicken");
