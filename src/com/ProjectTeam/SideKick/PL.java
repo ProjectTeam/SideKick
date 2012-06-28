@@ -8,12 +8,16 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.event.player.PlayerTeleportEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
+
+import com.ProjectTeam.API.Back;
 public class PL implements Listener{
 	public static boolean Tools = false;
     public static boolean game = false;
@@ -152,6 +156,16 @@ public class PL implements Listener{
 		if(Sneak){
 			event.setCancelled(true);
 		}
+	}
+	
+	@EventHandler(priority = EventPriority.NORMAL)
+	public void onPlayerDeath(PlayerDeathEvent event){
+		Back.setBack(event.getEntity().getName(), event.getEntity().getLocation());
+	}
+	
+	@EventHandler(priority = EventPriority.NORMAL)
+	public void onPlayerTeleport(PlayerTeleportEvent event){
+		Back.setBack(event.getPlayer().getName(), event.getPlayer().getLocation());
 	}
 }
 		
