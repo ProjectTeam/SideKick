@@ -1057,26 +1057,32 @@ public class SMain extends JavaPlugin{
 			//1.2.3 Mobs
 			else if (args[0].equalsIgnoreCase("irongolem")){
 				t.getWorld().spawnCreature(tl, EntityType.IRON_GOLEM);
+				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("iron_golem")){
 				t.getWorld().spawnCreature(tl, EntityType.IRON_GOLEM);
+				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("ocelot")){
 				t.getWorld().spawnCreature(tl, EntityType.OCELOT);
+				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("cat")){
 				t.getWorld().spawnCreature(tl, EntityType.OCELOT);
+				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("ocelot")){
 				t.getWorld().spawnCreature(tl, EntityType.OCELOT);
+				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("player")){
 				t.getWorld().spawnCreature(tl, EntityType.PLAYER);
+				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			return true;
