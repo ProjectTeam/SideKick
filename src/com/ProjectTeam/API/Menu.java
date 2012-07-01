@@ -312,6 +312,9 @@ public class Menu {
 		if(x(sender, "Sidekick.back")){
 		sender.sendMessage(G + "/Back - Send you back to prev. location");
 		}
+		if(x(sender, "Sidekick.helpop")){
+			sender.sendMessage(B + "/HelpOp [Message] - Sends Staff a Help Message");
+		}
 	}
 
 
