@@ -10,6 +10,9 @@ commands:
   Back:
    description: Back
    usage: /Back
+  HelpOp:
+   description: HelpOp
+   usage: /HelpOp
   SideKick2:
    description: Next Help Page
    usage: /SideKick
@@ -569,7 +572,12 @@ permissions:
   Sidekick.back:
    description: Permission
    default: op
-
+  Sidekick.helpop:
+   description: Permission
+   default: op
+  Sidekick.helpop.alert:
+   description: Permission
+   default: op
 
 
 

@@ -313,6 +313,22 @@ public class SMain extends JavaPlugin{
 			sender.sendMessage("AntiBuild is a Mode that disables building for non ops! Repeat Command to turn mode off");
 			return true;
 		}
+		else if (cmdLabel.equalsIgnoreCase("helpop") && has(p, "helpop")){
+			String message = "";
+			for (String part : args) {
+				if (message != "") message += " ";
+				message += part;
+			}
+			if(message.isEmpty()){
+				sender.sendMessage(ChatColor.RED + "Invalid message");
+			}
+			for(Player players : w.getPlayers()){
+				if(players.hasPermission("SideKick.helpop.alert") && !message.isEmpty()){
+					players.sendMessage(ChatColor.GRAY + "[" + ChatColor.RED + "HelpOp" + ChatColor.GRAY + "] " + sender.getName() + ": " +  message);
+				}
+			}
+			return true;
+		}
 		else if (cmdLabel.equalsIgnoreCase("c")){
 			if(!p.hasPermission("Sidekick.calculator")){
 				sender.sendMessage(R + "You do not have permission to use this!");
