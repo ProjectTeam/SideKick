@@ -42,6 +42,7 @@ import org.bukkit.util.Vector;
 
 import com.ProjectTeam.API.Back;
 import com.ProjectTeam.API.Menu;
+import com.ProjectTeam.API.Quick;
 
 import FileWriter.WriteFile;
 
@@ -177,9 +178,9 @@ public class SMain extends JavaPlugin{
 	}
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String cmdLabel, String[] args) { 
+		
 		if (!(sender instanceof Player)) {
-			sender.sendMessage("Sidekick only works in-game!");
-			return true;
+			sender.sendMessage("SideKick works only in-game!");
 		}
 		//Array's
 		int A[] = new int[64];
@@ -589,6 +590,30 @@ public class SMain extends JavaPlugin{
 		else if (cmdLabel.equalsIgnoreCase("spawn") && has(p, "spawn")  ){
 			p.teleport(w.getSpawnLocation());
 			sender.sendMessage(G + "You are now at Spawn!");
+			return true;
+		}
+		else if (cmdLabel.equalsIgnoreCase("marker") && has(p, "marker")){
+			if(args.length==0){
+				sender.sendMessage(ChatColor.GOLD + "You are now in Marker Mode");
+				sender.sendMessage(ChatColor.GOLD + "Right Click any block to set quick warp!");
+				Quick.enableMarkerMode(playername);
+			} else {
+				sender.sendMessage(R + "Check your arguements!");
+			}
+			return true;
+		}
+		else if (cmdLabel.equalsIgnoreCase("quickwarp") && has(p, "quickwarp")){
+			if(args.length==0){
+				if(Quick.hasWarpLocation(playername)){
+				p.teleport(Quick.getWarpLocation(playername));
+				p.sendMessage(ChatColor.GOLD + "You have teleported to your QuickWarp!");
+				} else {
+					sender.sendMessage(R + "You have not set a quickwarp yet!");
+				}
+				
+			} else {
+				sender.sendMessage(R + "Check your arguements!");
+			}
 			return true;
 		}
 		//Crete Name Output

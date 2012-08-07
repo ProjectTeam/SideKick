@@ -18,6 +18,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.Vector;
 
 import com.ProjectTeam.API.Back;
+import com.ProjectTeam.API.Quick;
 public class PL implements Listener{
 	public static boolean Tools = false;
     public static boolean game = false;
@@ -26,10 +27,26 @@ public class PL implements Listener{
     public static boolean TheKit = false;
     public static boolean Sneak = false;
     public static boolean fly = false;
-	@EventHandler(priority = EventPriority.NORMAL)
+	@EventHandler(priority = EventPriority.HIGH)
 	public void onPlayerInteract(PlayerInteractEvent event){
 		Player p = event.getPlayer(); 
         ItemStack item = p.getItemInHand();
+        int x = event.getClickedBlock().getLocation().getBlockX();
+        int y = event.getClickedBlock().getLocation().getBlockY();
+        int z = event.getClickedBlock().getLocation().getBlockZ();
+		try{
+        if(Quick.isInMarkerMode(p.getName())){
+        	if(p.hasPermission("Sidekick.marker")){
+        		if(event.getAction() == Action.RIGHT_CLICK_BLOCK){
+        			Quick.setWarpLocation(p.getName(), event.getClickedBlock().getLocation().add(new Vector(0,1,0)));
+        			p.sendMessage(ChatColor.GOLD + "Quick Warp set at " + "x = " + ChatColor.LIGHT_PURPLE + x + " , y = " + y + " , z = " + z);
+        			Quick.disableMarkerMode(p.getName());
+        		}
+        	} else {
+        		
+        	}
+        }
+		}catch (Exception i){}
         if(Tools){
         if (event.getAction() == Action.RIGHT_CLICK_AIR) {
             if (item.getType() == Material.STONE_PICKAXE) {

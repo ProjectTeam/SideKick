@@ -315,6 +315,12 @@ public class Menu {
 		if(x(sender, "Sidekick.helpop")){
 			sender.sendMessage(B + "/HelpOp [Message] - Sends Staff a Help Message");
 		}
+		if(x(sender, "Sidekick.quickwarp")){
+			sender.sendMessage(B + "/QuickWarp - Sends you to your quickwarp");
+		}
+		if(x(sender, "Sidekick.marker")){
+			sender.sendMessage(B + "/Marker - Enter QuickWarp Marker Mode to set your quickwarp");
+		}
 	}
 
 

@@ -1,5 +1,5 @@
 name: SideKick
-version: 7.5
+version: 8.0
 main: com.ProjectTeam.SideKick.SMain
 author: emericask8ur (ProjectTeam)
 description: Server manager, commands, multi-world, anti-grief, and chat plugin
@@ -10,6 +10,12 @@ commands:
   Back:
    description: Back
    usage: /Back
+  Marker:
+   description: Help Menu
+   usage: /Marker
+  QuickWarp:
+   description: Help Menu
+   usage: /QuickWarp
   HelpOp:
    description: HelpOp
    usage: /HelpOp
@@ -578,7 +584,12 @@ permissions:
   Sidekick.helpop.alert:
    description: Permission
    default: op
-
+  Sidekick.quickwarp:
+   description: Permission
+   default: op
+  Sidekick.marker:
+   description: Permission
+   default: op
 
 
 
