@@ -94,9 +94,6 @@ public class Menu {
 		if(x(sender, "Sidekick.broadcast")){
 		sender.sendMessage(B + "/Broadcast <Message>");
 		}
-		if(x(sender, "Sidekick.toollast")){
-		sender.sendMessage(B + "/ToolLast - Makes Tools never Break");
-		}
 		if(x(sender, "Sidekick.prefix")){
 		sender.sendMessage(G + "/Prefix <name>");
 		}
@@ -135,6 +132,12 @@ public class Menu {
 		}
 		if(x(sender, "Sidekick.fly")){
 		sender.sendMessage(B + "/Fly - Allows you to Fly");
+		}
+		else if(x(sender, "Sidekick.fly.other")){
+		sender.sendMessage(B + "/Fly [Player] - Allows you to Fly");
+		}
+		else if (x(sender, "Sidekick.fly") && x(sender, "Sidekick.fly.other")){
+			sender.sendMessage(B + "/Fly | /Fly [Player] - Allows you to Fly");
 		}
 		if(x(sender, "Sidekick.creative")){
 		sender.sendMessage(G + "/Creative - Creative Mode");

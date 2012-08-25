@@ -72,9 +72,7 @@ public class SMain extends JavaPlugin{
 	@Override 
 	public void onEnable() {
 		PluginManager pm = getServer().getPluginManager();
-		pm.registerEvents(new PL(), this);
-		pm.registerEvents(new BL(), this);
-		pm.registerEvents(new EL(), this);
+		pm.registerEvents(new Events(), this);
 		loadConfig();
 		HashMapz.setItems();
 		PotionEffects.setPotions();
@@ -699,8 +697,8 @@ public class SMain extends JavaPlugin{
 		//Log
 		else if (cmdLabel.equalsIgnoreCase("log") && args.length==1 && has(p, "log")  ){
 			if(args[0].equalsIgnoreCase("breaks")){
-				BL.log =!BL.log;
-				if(BL.log){
+				Events.log =!Events.log;
+				if(Events.log){
 					sender.sendMessage(G + "[SideKick] Will now log each Block Broken and Record players actions in the Server.txt File!");
 				} else {
 					sender.sendMessage(R + "[SideKick] Will stop logging each break in the File!");
@@ -940,8 +938,8 @@ public class SMain extends JavaPlugin{
 		//Disable
 		else if (cmdLabel.equalsIgnoreCase("disable") && args.length==1 && has(p, "world")  ){
 			if(args[0].equalsIgnoreCase("creeper")) {
-				EL.creeper = !EL.creeper;
-				if (EL.creeper) {
+				Events.creeper = !Events.creeper;
+				if (Events.creeper) {
 					sender.sendMessage(R + "Exlosion will happen!");
 				} else {
 					sender.sendMessage(B + "Creepers will not explode!");
@@ -981,148 +979,148 @@ public class SMain extends JavaPlugin{
 			Block x = block.getRelative(BlockFace.UP);
 			Location tl = x.getLocation();
 			if (args[0].equalsIgnoreCase("chicken")){
-				t.getWorld().spawnCreature(tl, EntityType.CHICKEN);
+				t.getWorld().spawnEntity(tl, EntityType.CHICKEN);
 				sender.sendMessage(Y + "You have spawned a chicken");
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("cow")){
-				t.getWorld().spawnCreature(tl, EntityType.COW);
+				t.getWorld().spawnEntity(tl, EntityType.COW);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("creeper")){
-				t.getWorld().spawnCreature(tl, EntityType.CREEPER);
+				t.getWorld().spawnEntity(tl, EntityType.CREEPER);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("enderman")){
-				t.getWorld().spawnCreature(tl, EntityType.ENDERMAN);
+				t.getWorld().spawnEntity(tl, EntityType.ENDERMAN);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("ghast")){
-				t.getWorld().spawnCreature(tl, EntityType.GHAST);
+				t.getWorld().spawnEntity(tl, EntityType.GHAST);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("giant")){
-				t.getWorld().spawnCreature(tl, EntityType.GIANT);
+				t.getWorld().spawnEntity(tl, EntityType.GIANT);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("pig")){
-				t.getWorld().spawnCreature(tl, EntityType.PIG);
+				t.getWorld().spawnEntity(tl, EntityType.PIG);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("sheep")){
-				t.getWorld().spawnCreature(tl, EntityType.SHEEP);
+				t.getWorld().spawnEntity(tl, EntityType.SHEEP);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("skeleton")){
-				t.getWorld().spawnCreature(tl, EntityType.SKELETON);
+				t.getWorld().spawnEntity(tl, EntityType.SKELETON);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("slime")){
-				t.getWorld().spawnCreature(tl, EntityType.SLIME);
+				t.getWorld().spawnEntity(tl, EntityType.SLIME);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("spider")){
-				t.getWorld().spawnCreature(tl, EntityType.SPIDER);
+				t.getWorld().spawnEntity(tl, EntityType.SPIDER);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("wolf")){
-				t.getWorld().spawnCreature(tl, EntityType.WOLF);
+				t.getWorld().spawnEntity(tl, EntityType.WOLF);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("zombie")){
-				t.getWorld().spawnCreature(tl, EntityType.ZOMBIE);
+				t.getWorld().spawnEntity(tl, EntityType.ZOMBIE);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("cavespider")){
-				t.getWorld().spawnCreature(tl, EntityType.CAVE_SPIDER); 
+				t.getWorld().spawnEntity(tl, EntityType.CAVE_SPIDER); 
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("blaze")){
-				t.getWorld().spawnCreature(tl, EntityType.BLAZE);
+				t.getWorld().spawnEntity(tl, EntityType.BLAZE);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("dragon")){
-				t.getWorld().spawnCreature(tl, EntityType.ENDER_DRAGON);
+				t.getWorld().spawnEntity(tl, EntityType.ENDER_DRAGON);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("enderdragon")){
-				t.getWorld().spawnCreature(tl, EntityType.ENDER_DRAGON);
+				t.getWorld().spawnEntity(tl, EntityType.ENDER_DRAGON);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("mustroomcow")){
-				t.getWorld().spawnCreature(tl, EntityType.MUSHROOM_COW);
+				t.getWorld().spawnEntity(tl, EntityType.MUSHROOM_COW);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("silverfish")){
-				t.getWorld().spawnCreature(tl, EntityType.SILVERFISH);
+				t.getWorld().spawnEntity(tl, EntityType.SILVERFISH);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("villager")){
-				t.getWorld().spawnCreature(tl, EntityType.VILLAGER);
+				t.getWorld().spawnEntity(tl, EntityType.VILLAGER);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("npc")){
-				t.getWorld().spawnCreature(tl, EntityType.VILLAGER);
+				t.getWorld().spawnEntity(tl, EntityType.VILLAGER);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("fireball")){
-				t.getWorld().spawnCreature(tl, EntityType.FIREBALL);
+				t.getWorld().spawnEntity(tl, EntityType.FIREBALL);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("unknown")){
-				t.getWorld().spawnCreature(tl, EntityType.UNKNOWN);
+				t.getWorld().spawnEntity(tl, EntityType.UNKNOWN);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			//1.2.3 Mobs
 			else if (args[0].equalsIgnoreCase("irongolem")){
-				t.getWorld().spawnCreature(tl, EntityType.IRON_GOLEM);
+				t.getWorld().spawnEntity(tl, EntityType.IRON_GOLEM);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("iron_golem")){
-				t.getWorld().spawnCreature(tl, EntityType.IRON_GOLEM);
+				t.getWorld().spawnEntity(tl, EntityType.IRON_GOLEM);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("ocelot")){
-				t.getWorld().spawnCreature(tl, EntityType.OCELOT);
+				t.getWorld().spawnEntity(tl, EntityType.OCELOT);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("cat")){
-				t.getWorld().spawnCreature(tl, EntityType.OCELOT);
+				t.getWorld().spawnEntity(tl, EntityType.OCELOT);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("ocelot")){
-				t.getWorld().spawnCreature(tl, EntityType.OCELOT);
+				t.getWorld().spawnEntity(tl, EntityType.OCELOT);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
 			else if (args[0].equalsIgnoreCase("player")){
-				t.getWorld().spawnCreature(tl, EntityType.PLAYER);
+				t.getWorld().spawnEntity(tl, EntityType.PLAYER);
 				sender.sendMessage(Y + "You have spawned a " + args[0]);
 				return true;
 			}
@@ -1560,8 +1558,8 @@ public class SMain extends JavaPlugin{
 		}
 		//REAL MODE 
 		else if (cmdLabel.equalsIgnoreCase("realmode") && has(p, "realmode")  ){
-			EL.usePorkDrops = !EL.usePorkDrops;
-			if (EL.usePorkDrops) {
+			Events.usePorkDrops = !Events.usePorkDrops;
+			if (Events.usePorkDrops) {
 				sender.sendMessage("Players will now drop pork.");
 			} else {
 				sender.sendMessage("Players will no longer drop pork.");
@@ -1582,8 +1580,8 @@ public class SMain extends JavaPlugin{
 		}
 		//MysteryBox
 		else if (cmdLabel.equalsIgnoreCase("mysterybox") && has(p, "mysterybox")  ){
-			BL.Mystery =!BL.Mystery;
-			if (BL.Mystery) {
+			Events.Mystery =!Events.Mystery;
+			if (Events.Mystery) {
 				sender.sendMessage("Mystery will now begin!");
 			} else {
 				sender.sendMessage("Mystery off.");
@@ -1620,8 +1618,8 @@ public class SMain extends JavaPlugin{
 		}
 		//ToolLast
 		else if (cmdLabel.equalsIgnoreCase("toolLast") && has(p, "toollast")  ){
-			PL.Tools =!PL.Tools;
-			if (PL.Tools) {
+			Events.Tools =!Events.Tools;
+			if (Events.Tools) {
 				sender.sendMessage("Everlasting Tools Enabled!");
 			} else {
 				sender.sendMessage("ToolLast off.");
@@ -1664,8 +1662,8 @@ public class SMain extends JavaPlugin{
 		}
 		//LoginKit
 		else if (cmdLabel.equalsIgnoreCase("loginkit") && has(p, "loginkit")  ){
-			PL.TheKit = !PL.TheKit;
-			if(PL.TheKit){
+			Events.TheKit = !Events.TheKit;
+			if(Events.TheKit){
 				sender.sendMessage("LoginKit Enabled! On Login Players will receive a Start Kit");	    			
 			} else {
 				sender.sendMessage("LoginKit Disabled!");
@@ -1764,8 +1762,8 @@ public class SMain extends JavaPlugin{
 		}
 		//AntiBuild 
 		else if (cmdLabel.equalsIgnoreCase("antibuild") && has(p, "antibuild")  ){
-			BL.grief =!BL.grief;
-			if(BL.grief){
+			Events.grief =!Events.grief;
+			if(Events.grief){
 				sender.sendMessage(Y + "AntiBuild Griefing Tool Enabled, Dont Let Anyone Place Blocks!");
 				sender.sendMessage( Y + "AntiBuild Disabled!");
 			}
@@ -1773,8 +1771,8 @@ public class SMain extends JavaPlugin{
 		}
 		//SignName
 		else if (cmdLabel.equalsIgnoreCase("signname") && has(p, "signname")  ){
-			BL.SignCh =!BL.SignCh;
-			if(BL.SignCh){
+			Events.SignCh =!Events.SignCh;
+			if(Events.SignCh){
 				sender.sendMessage("SignName On!");
 			} else {
 				sender.sendMessage("SignName Off");
@@ -1783,8 +1781,8 @@ public class SMain extends JavaPlugin{
 		}
 		//Portal
 		else if (cmdLabel.equalsIgnoreCase("portal") && has(p, "portal")  ){
-			BL.portal =!BL.portal;
-			if(BL.portal){
+			Events.portal =!Events.portal;
+			if(Events.portal){
 				sender.sendMessage("Portal Activated!");
 			} else {
 				sender.sendMessage("Portal Deactivated!");
@@ -1891,8 +1889,8 @@ public class SMain extends JavaPlugin{
 		}
 		//Sneaks
 		else if (cmdLabel.equalsIgnoreCase("sneaks") && has(p, "sneaks")  ){
-			PL.Sneak =!PL.Sneak;
-			if(PL.Sneak){
+			Events.Sneak =!Events.Sneak;
+			if(Events.Sneak){
 				sender.sendMessage("Sneaking Is Disabled! Repeat Command to Enable!");        		 
 			} else {
 				sender.sendMessage("Sneaking Is Now Enabled");
@@ -1901,8 +1899,8 @@ public class SMain extends JavaPlugin{
 		}
 		//nofire
 		else if (cmdLabel.equalsIgnoreCase("nofire") && has(p, "nofire")  ){
-			BL.burn =!BL.burn;
-			if(BL.burn){
+			Events.burn =!Events.burn;
+			if(Events.burn){
 				sender.sendMessage ("NoFire Enabled!");
 			} else {
 				sender.sendMessage("NoFire Disabled!");
@@ -1910,12 +1908,38 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//Fly
-		else if (cmdLabel.equalsIgnoreCase("fly") && has(p, "fly")  ){
-			PL.fly = !PL.fly;
-			if(PL.fly){
-				sender.sendMessage("Click with Sign in Hand!");
+		else if (cmdLabel.equalsIgnoreCase("fly")){
+			if(args.length==0){
+				if(p.hasPermission("Sidekick.fly")){
+				if(p.getAllowFlight() == true){
+					p.setAllowFlight(false);
+					sender.sendMessage(ChatColor.GOLD + "Fly: False");
+				} else {
+					p.setAllowFlight(true);
+					sender.sendMessage(ChatColor.GOLD + "Fly: True");
+					}
+				} else {
+					sender.sendMessage(ChatColor.RED + "You do not have permission!");
+				}
+			}
+			else if (args.length==1){
+				Player player = server.getPlayer(args[0]);
+				if(player == null){
+					sender.sendMessage(ChatColor.RED + "Player not found!");
+				}
+				if(player.hasPermission("Sidekick.fly.other")){
+					if(player.getAllowFlight() == true){
+						player.setAllowFlight(false);
+						sender.sendMessage(ChatColor.GOLD + "Fly: False");
+					} else {
+						player.setAllowFlight(true);
+						sender.sendMessage(ChatColor.GOLD + "Fly: True");
+					}
+				} else {
+					sender.sendMessage(ChatColor.RED + "You do not have permission!");
+				}
 			} else {
-				sender.sendMessage(R + "Fly Disabled");
+				sender.sendMessage(ChatColor.RED + "Did you mean /Fly or /Fly [Player]");
 			}
 			return true;
 		} 
