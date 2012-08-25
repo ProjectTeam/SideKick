@@ -1,5 +1,5 @@
 name: SideKick
-version: 8.0
+version: 8.5
 main: com.ProjectTeam.SideKick.SMain
 author: emericask8ur (ProjectTeam)
 description: Server manager, commands, multi-world, anti-grief, and chat plugin
@@ -118,9 +118,6 @@ commands:
   Teleport:
    description: Teleports to player
    usage: /Teleport [Player]
-  ToolLast:
-   description: Tools always last
-   usage: /ToolLast
   NoMobs:
    description: Kills all Mobs
    usage: /NoMobs

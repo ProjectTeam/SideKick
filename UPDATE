@@ -1,3 +1,5 @@
 ==Updates==
--Added helpop command
--Added Quick Warp
+-Updated Fly Command
+-Merged all event classes
+-Fixed onPlayerInteractEvent - (The Spam of Console)
+-Removed ToolLast Command
