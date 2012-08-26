@@ -180,12 +180,11 @@ public class Events implements Listener {
 
 	@EventHandler(priority = EventPriority.HIGH)
 	public void onPlayerInteract(PlayerInteractEvent event){
+		try{
 		Player p = event.getPlayer(); 
-        ItemStack item = p.getItemInHand();
         int x = event.getClickedBlock().getLocation().getBlockX();
         int y = event.getClickedBlock().getLocation().getBlockY();
         int z = event.getClickedBlock().getLocation().getBlockZ();
-		try{
         if(Quick.isInMarkerMode(p.getName())){
         	if(p.hasPermission("Sidekick.marker")){
         		if(event.getAction() == Action.RIGHT_CLICK_BLOCK){
