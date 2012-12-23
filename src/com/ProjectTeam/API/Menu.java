@@ -324,6 +324,9 @@ public class Menu {
 		if(x(sender, "Sidekick.marker")){
 			sender.sendMessage(B + "/Marker - Enter QuickWarp Marker Mode to set your quickwarp");
 		}
+		if(x(sender, "Sidekick.status")){
+			sender.sendMessage(B + "/Status <Player> - Shows status of player");
+		}
 	}
 
 

@@ -27,7 +27,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 
-import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
@@ -121,7 +120,7 @@ public class SMain extends JavaPlugin{
 				if (o instanceof String) {
 					String worldname = (String) o;
 					//validate if world exists
-					File worldfolder = ((CraftServer) getServer()).getWorldContainer();
+					File worldfolder = ((org.bukkit.craftbukkit.v1_4_6.CraftServer) getServer()).getWorldContainer();
 					worldfolder = new File(worldfolder, worldname);
 					if (worldfolder.exists()) {
 						System.out.println("[SideKick] Loading world: " + worldname);
@@ -367,10 +366,7 @@ public class SMain extends JavaPlugin{
 			return true;
 		}
 		//Back
-		else if (cmdLabel.equalsIgnoreCase("back")){
-			if(!(p.hasPermission("Sidekick.back"))){
-				sender.sendMessage(R + "You do not have permission!");
-			}
+		else if (cmdLabel.equalsIgnoreCase("back") && has(p, "back")){
 			if(!(args.length==0)){
 				sender.sendMessage(R + "Did you mean /Back");
 			}
